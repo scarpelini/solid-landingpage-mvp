@@ -1,0 +1,11 @@
+{
+  "button": {
+    "toggleLanguage": "Change language",
+    "toggleTheme": "Change theme",
+    "settings": "Settings",
+    "save": "Save",
+    "back": "Back",
+    "register": "Register",
+    "enter": "Enter"
+  }
+}

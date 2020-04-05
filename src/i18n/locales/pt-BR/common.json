@@ -1,0 +1,11 @@
+{
+  "button": {
+    "toggleLanguage": "Alterar idioma",
+    "toggleTheme": "Alterar theme",
+    "settings": "Configurações",
+    "save": "Salvar",
+    "back": "Voltar",
+    "register": "Cadastrar",
+    "enter": "Entrar"
+  }
+}
