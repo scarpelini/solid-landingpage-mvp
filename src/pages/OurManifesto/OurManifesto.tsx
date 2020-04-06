@@ -2,11 +2,13 @@ import React from 'react';
 
 import OurManifestoLayout from './Layout/OurManifestoLayout';
 
-interface Props {}
+interface Props {
+  id: string;
+}
 
 class OurManifesto extends React.PureComponent<Props> {
   render() {
-    return <OurManifestoLayout />;
+    return <OurManifestoLayout id={this.props.id} />;
   }
 }
 

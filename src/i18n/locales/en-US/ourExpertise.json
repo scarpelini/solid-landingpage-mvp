@@ -1,3 +1,17 @@
 {
-  "title": "What we offer for your new business"
+  "title": "What we offer<br>for your new business",
+  "list": [
+    {
+      "title": "Understanding what matters most",
+      "description": "A well-defined plan of action regarding what you're trying to solve is crucial. We help you to identify the core of your future product, turning it into a simple, powerful, and engaging solution for your target audience."
+    },
+    {
+      "title": "Covering all product development cycles",
+      "description": "Throughout Strategy, User Experience, User Interface, Development, and Testing processes, our team uncover the best ways to represent your business context to the public."
+    },
+    {
+      "title": "Flexible workforce",
+      "description": "Do you already have a UX & UI ready for the Development phase? No problem, we can help you too. Our team is flexible enough to work from different starting points."
+    }
+  ]
 }

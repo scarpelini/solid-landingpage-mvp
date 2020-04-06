@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     padding: 0;
     margin: 0;
+    outline: none;
     cursor: pointer;
   }
 
@@ -36,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
   img {
     max-width: 100%;
     user-select: none;
+  }
+
+  p {
+    margin: 0;
   }
 
   #root {

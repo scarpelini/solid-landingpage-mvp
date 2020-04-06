@@ -10,7 +10,11 @@ interface Props {
 
 const Heading: React.FC<Props> = (props: Props) => (
   <Header>
-    <H1>{props.label}</H1>
+    <H1
+      dangerouslySetInnerHTML={{
+        __html: `${props.label}`,
+      }}
+    />
   </Header>
 );
 

@@ -27,6 +27,7 @@ export interface Typography {
   subtitle2: TextStyle;
   body1: TextStyle;
   body2: TextStyle;
+  body3: TextStyle;
   button1: TextStyle;
   button2: TextStyle;
   caption: TextStyle;

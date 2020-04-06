@@ -1,50 +1,48 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 
 import OurExpertise from '../../OurExpertise/OurExpertise';
 import OurManifesto from '../../OurManifesto/OurManifesto';
 import TechStack from '../../TechStack/TechStack';
-import Partners from '../../Partners/Partners';
-import CompaniesWorked from '../../CompaniesWorked/CompaniesWorked';
+import PartnersSay from '../../PartnersSay/PartnersSay';
+import Companies from '../../Companies/Companies';
 import SayHi from '../../SayHi/SayHi';
 
-import { Container, H1 } from 'components';
+import { Container, ButtonGoTo } from 'components';
+import { Home, Title, List, ListItem, Text, Footer } from './HomeLayout.styled';
 
 const HomeLayout: React.FC = () => {
   const { t } = useTranslation(['home']);
+
+  const list: string[] = t('list', {
+    returnObjects: true,
+  });
+
   return (
     <Container>
-      <ul>
-        <li>
-          <Link to={'/'}>Home</Link>
-        </li>
-        <li>
-          <Link to={'/'}>Our Expertise</Link>
-        </li>
-        <li>
-          <Link to={'/'}>Our Manifesto</Link>
-        </li>
-        <li>
-          <Link to={'/'}>Tech Stack</Link>
-        </li>
-        <li>
-          <Link to={'/'}>Partners</Link>
-        </li>
-        <li>
-          <Link to={'/'}>Companies Worked</Link>
-        </li>
-        <li>
-          <Link to={'/'}>Say Hi</Link>
-        </li>
-      </ul>
-      <H1>{t('title')}</H1>
-      <OurExpertise />
-      <OurManifesto />
-      <TechStack />
-      <Partners />
-      <CompaniesWorked />
-      <SayHi />
+      <Home>
+        <Title
+          dangerouslySetInnerHTML={{
+            __html: t('title'),
+          }}
+        />
+        <List>
+          {list.map((item, i: number) => (
+            <ListItem key={`homeLayout-${i}`}>
+              <Text>{item}</Text>
+            </ListItem>
+          ))}
+        </List>
+        <Footer>
+          <ButtonGoTo onClick={() => console.log('Scroll To!')} />
+        </Footer>
+      </Home>
+      <OurExpertise id={'our-expertise'} />
+      <OurManifesto id={'our-manifesto'} />
+      <TechStack id={'tech-stack'} />
+      <PartnersSay id={'partners-say'} />
+      <Companies id={'companies'} />
+      <SayHi id={'say-hi'} />
     </Container>
   );
 };

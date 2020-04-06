@@ -2,11 +2,13 @@ import React from 'react';
 
 import OurExpertiseLayout from './Layout/OurExpertiseLayout';
 
-interface Props {}
+interface Props {
+  id: string;
+}
 
 class OurExpertise extends React.PureComponent<Props> {
   render() {
-    return <OurExpertiseLayout />;
+    return <OurExpertiseLayout id={this.props.id} />;
   }
 }
 

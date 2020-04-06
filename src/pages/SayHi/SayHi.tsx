@@ -2,11 +2,13 @@ import React from 'react';
 
 import SayHiLayout from './Layout/SayHiLayout';
 
-interface Props {}
+interface Props {
+  id: string;
+}
 
 class SayHi extends React.PureComponent<Props> {
   render() {
-    return <SayHiLayout />;
+    return <SayHiLayout id={this.props.id} />;
   }
 }
 
