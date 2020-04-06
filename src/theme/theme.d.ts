@@ -37,13 +37,11 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       primary: string;
+      onPrimary: string;
       secondary: string;
+      onSecondary: string;
       background: string;
       error: string;
-      onPrimary: string;
-      onSecondary: string;
-      onBackground: string;
-      onError: string;
     };
     breakpoints: {
       mobileS: string;

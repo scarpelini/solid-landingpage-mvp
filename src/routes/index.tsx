@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { changeLanguage, changeTheme } from 'redux/modules/settings/actions';
 import { getLanguage, getTheme } from 'redux/modules/settings/selectors';
 import { Header, A } from 'components';
-import { Home, About } from 'pages';
+import { Home } from 'pages';
 
 const Routes: React.FC = () => {
   const dispatch = useDispatch();
@@ -26,9 +26,6 @@ const Routes: React.FC = () => {
       <Switch>
         <Route exact path="/">
           <Home />
-        </Route>
-        <Route exact path="/about">
-          <About />
         </Route>
       </Switch>
     </Router>

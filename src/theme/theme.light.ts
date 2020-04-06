@@ -4,14 +4,12 @@ import breakpoints from './breakpoints';
 
 const theme: DefaultTheme = {
   colors: {
-    primary: '#005efc',
-    secondary: '#8e8e8e',
-    background: '#fff',
-    error: '#ff5656',
+    primary: '#000000',
     onPrimary: '#fff',
-    onSecondary: '#141414',
-    onBackground: '#141414',
-    onError: '#fff',
+    secondary: '#7F7F7F',
+    onSecondary: '#C1C1C1',
+    background: '#ffffff',
+    error: '#D61A10',
   },
   typography,
   breakpoints,
