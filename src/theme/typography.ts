@@ -33,6 +33,10 @@ const typography: Typography = {
     fontFamily: secondaryFont,
     fontSize: '5rem',
   },
+  body4: {
+    fontFamily: primaryFont,
+    fontSize: '4rem',
+  },
   button1: {
     fontFamily: primaryFont,
     fontSize: '2rem',

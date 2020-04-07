@@ -1,3 +1,7 @@
 {
-  "title": "Want to work with us?"
+  "title": "Want to work<br>with us?",
+  "subtitle": "There is no better time than now!",
+  "button": {
+    "sayHi": "Say Hi."
+  }
 }

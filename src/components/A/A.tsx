@@ -1,25 +1,22 @@
 import styled from 'styled-components';
 
 const A = styled.a`
+  color: ${({ theme: { colors } }) => colors.primary};
+  font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
+  font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
   display: inline-block;
-  padding: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.69pt;
+  line-height: 1.6rem;
   cursor: pointer;
-  text-decoration: underline;
-  transition-duration: 0.1s;
-  font-size: ${props => props.theme.typography.button1.fontSize};
-  font-weight: ${props => props.theme.typography.button1.fontWeight};
-  color: ${props => props.theme.colors.primary};
 
   &:hover {
     opacity: 0.85;
   }
+
   &:active {
     opacity: 0.55;
-  }
-
-  ::selection {
-    color: none;
-    background: none;
   }
 `;
 
