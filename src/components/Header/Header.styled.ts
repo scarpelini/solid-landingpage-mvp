@@ -13,6 +13,10 @@ export const Wrap = styled.div`
   margin: 0 auto;
   max-width: 1770px;
   width: 100%;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+    padding: 0 4rem;
+  }
 `;
 
 export const Image = styled.img`
@@ -52,16 +56,15 @@ export const Nav = styled.nav`
     transform: translateX(-50%);
   }
 
-  ${Text}:last-of-type {
-    &:after {
-      background-color: ${({ theme: { colors } }) => colors.primary};
-      content: '';
-      display: inline-block;
-      position: relative;
-      top: -4px;
-      margin: 0 2rem;
-      width: 4.2rem;
-      height: 0.1rem;
+  @media ${({ theme: { breakpoints } }) => breakpoints.laptop} {
+    ${Text}:first-of-type {
+      left: 33%;
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    ${Text}:first-of-type, ${Text}:last-of-type {
+      display: none;
     }
   }
 `;
@@ -73,6 +76,21 @@ export const ButtonBookNow = styled(Link)`
   margin-right: 9rem;
   text-decoration: none;
   letter-spacing: 0.69pt;
+
+  &:before {
+    background-color: ${({ theme: { colors } }) => colors.primary};
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    margin: 0 2rem;
+    width: 4.2rem;
+    height: 0.1rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+    margin-right: 3.1rem;
+  }
 `;
 
 export const Hamb = styled.button<MenuProps>`
@@ -191,6 +209,13 @@ export const Socials = styled.ul<MenuProps>`
   width: 100%;
   transition: opacity 0.25s ease-in-out 0.5s, visibility 0.25s ease-in-out 0s;
   pointer-events: none;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+    flex-direction: column;
+    left: 40px;
+    bottom: 30px;
+    transform: translateX(0);
+  }
 `;
 
 export const SocialItem = styled.li`

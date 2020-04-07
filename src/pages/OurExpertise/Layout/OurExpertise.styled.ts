@@ -4,6 +4,15 @@ export const Container = styled.section`
   header {
     margin-bottom: 11.2rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
+    padding-left: 5.2rem;
+    padding-right: 5.2rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    align-items: flex-start;
+  }
 `;
 
 export const Content = styled.div`

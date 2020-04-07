@@ -6,6 +6,12 @@ export const Container = styled.section`
   header {
     margin-bottom: 17.5rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    align-items: flex-start;
+    padding-left: 5.2rem;
+    padding-right: 5.2rem;
+  }
 `;
 
 export const List = styled.ul`
