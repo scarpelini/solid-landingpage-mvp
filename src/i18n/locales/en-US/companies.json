@@ -1,3 +1,13 @@
 {
-  "title": "Companies we are<br>fortunate to work with"
+  "title": "Companies we are<br>fortunate to work with",
+  "list": [
+    { "picture": "cpbr.png", "alt": "cc" },
+    { "picture": "dm9.png", "alt": "DM9" },
+    { "picture": "fcb.png", "alt": "cc" },
+    { "picture": "ginga.png", "alt": "Ginga" },
+    { "picture": "ginga.png", "alt": "Ginga" },
+    { "picture": "fcb.png", "alt": "cc" },
+    { "picture": "dm9.png", "alt": "DM9" },
+    { "picture": "cpbr.png", "alt": "cc" }
+  ]
 }
