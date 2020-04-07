@@ -1,3 +1,20 @@
 {
-  "title": "What our partners say"
+  "title": "What our partners say",
+  "list": [
+    {
+      "picture": "anthony-banks.jpg",
+      "name": "Anthony Banks, Owner <0/> <br>Notist",
+      "message": "<p>I thought that features would be best created in a certain way, but SOLID had the expertise to recommend more sensible solutions. You're hiring experts, so leverage them.</p>"
+    },
+    {
+      "picture": "anthony-banks.jpg",
+      "name": "Anthony Banks, Owner <0/> <br>Notist",
+      "message": "<p>I thought that features would be best created in a certain way, but SOLID had the expertise to recommend more sensible solutions. You're hiring experts, so leverage them.</p>"
+    },
+    {
+      "picture": "anthony-banks.jpg",
+      "name": "Anthony Banks, Owner <0/> <br>Notist",
+      "message": "<p>I thought that features would be best created in a certain way, but SOLID had the expertise to recommend more sensible solutions. You're hiring experts, so leverage them.</p>"
+    }
+  ]
 }
