@@ -46,7 +46,7 @@ export const Title = styled(H1)`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
-    margin-bottom: 7.3rem;
+    margin-bottom: 5rem;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -64,7 +64,6 @@ export const MobileText = styled.p`
   font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
   font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
 
-  padding-left: 2.7rem;
   line-height: 2.2rem;
   letter-spacing: 0.69pt;
   text-transform: uppercase;
@@ -73,8 +72,12 @@ export const MobileText = styled.p`
     margin-bottom: 2.2rem;
   }
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     display: block;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding-left: 2.7rem;
   }
 `;
 
@@ -92,12 +95,13 @@ export const List = styled.ul`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    order: 3;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 3rem;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    order: 3;
     padding: 0 2.2rem 0 2.7rem;
   }
 `;
@@ -140,11 +144,11 @@ export const Footer = styled.footer`
   bottom: 40px;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    order: 2;
     align-self: center;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    order: 2;
     position: relative;
     bottom: auto;
     margin-top: 7.4rem;

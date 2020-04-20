@@ -43,7 +43,7 @@ const typography: Typography = {
   },
   button2: {
     fontFamily: primaryFont,
-    fontSize: '0.9rem',
+    fontSize: '2.5rem',
   },
   caption: {
     fontFamily: primaryFont,

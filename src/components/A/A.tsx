@@ -10,9 +10,10 @@ const A = styled.a`
   letter-spacing: 0.69pt;
   line-height: 1.6rem;
   cursor: pointer;
+  transition: opacity 0.25s ease-in-out 0s;
 
   &:hover {
-    opacity: 0.85;
+    opacity: 0.6;
   }
 
   &:active {

@@ -13,13 +13,30 @@ export const Container = styled.section`
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     align-items: flex-start;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+
+    header {
+      margin-bottom: 9.9rem;
+    }
+
+    h1 {
+      max-width: 320px;
+    }
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    flex-direction: column;
+  }
 `;
 
 export const Col = styled.div`
@@ -30,6 +47,15 @@ export const Col = styled.div`
     display: flex;
     justify-content: center;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    max-width: 100%;
+    width: auto;
+
+    &:first-of-type {
+      padding: 0 2.2rem 0 2.7rem;
+    }
+  }
 `;
 
 export const List = styled.ul``;
@@ -38,11 +64,24 @@ export const ListItem = styled.li`
   &:not(:last-child) {
     margin-bottom: 8.9rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    &:not(:last-child) {
+      margin-bottom: 7.5rem;
+    }
+  }
 `;
 
 export const Title = styled.h3`
   font-size: ${({ theme: { typography } }) => typography.subtitle1.fontSize};
   margin-bottom: 3.9rem;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    font-size: ${({ theme: { typography } }) => typography.button2.fontSize};
+    margin: 0 0 3rem 0;
+    max-width: 260px;
+    line-height: 3.5rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -52,4 +91,8 @@ export const Description = styled.p`
   max-width: 652px;
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    margin-top: 4rem;
+  }
+`;

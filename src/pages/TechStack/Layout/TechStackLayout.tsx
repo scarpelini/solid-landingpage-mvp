@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import AssetReact from 'res/svg/react.svg';
 import AssetNodeJS from 'res/svg/nodejs.svg';
 import AssetJavaScript from 'res/svg/javascript.svg';
-import { Heading } from 'components';
+import { Heading, H2 } from 'components';
 
 import { Container, Text, List, ListItem, Image } from './TechStack.styled';
 
@@ -34,6 +34,11 @@ const TechStackLayout: React.FC<Props> = (props: Props) => {
           <Image src={AssetJavaScript} />
         </ListItem>
       </List>
+      <H2
+        dangerouslySetInnerHTML={{
+          __html: t('subtitle'),
+        }}
+      />
       <Text
         dangerouslySetInnerHTML={{
           __html: t('text.1'),

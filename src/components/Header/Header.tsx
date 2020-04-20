@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { changeLanguage, changeTheme } from 'redux/modules/settings/actions';
 // import { getLanguage, getTheme } from 'redux/modules/settings/selectors';
 import { useTranslation } from 'react-i18next';
-import { HashLink as Link } from 'react-router-hash-link';
+// import { HashLink as Link } from 'react-router-hash-link';
 
 import Logo from 'res/svg/solid-logotype.svg';
-import { A } from 'components';
+// import { A } from 'components';
 import {
   Container,
   Image,
   Text,
   Nav,
-  Hamb,
+  // Hamb,
   Wrap,
-  Toggle,
-  List,
-  ListItem,
+  // Toggle,
+  // List,
+  // ListItem,
   ButtonBookNow,
-  Socials,
-  SocialItem,
+  // Socials,
+  // SocialItem,
 } from './Header.styled';
 
 // interface Props {}
 
 const Header: React.FC = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+  // const [openMenu, setOpenMenu] = useState(false);
   const { t } = useTranslation(['common', 'header']);
   // const dispatch = useDispatch();
   // const language = useSelector(getLanguage);
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
             <Text>{t('header:investment')}</Text>
             <Text>{t('header:immediateAvailability')}</Text>
             <ButtonBookNow to={'/'}>{t('common:button.bookNow')}</ButtonBookNow>
-            <Hamb onClick={() => setOpenMenu(!openMenu)} toggle={openMenu} />
+            {/* <Hamb onClick={() => setOpenMenu(!openMenu)} toggle={openMenu} /> */}
           </Nav>
         </Wrap>
         {/* <A onClick={() => dispatch(changeLanguage(nextLanguage))}>
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
       <A onClick={() => dispatch(changeTheme(nextTheme.toLowerCase()))}>
         {nextTheme}
       </A> */}
-        <Toggle toggle={openMenu}>
+        {/* <Toggle toggle={openMenu}>
           <List>
             <ListItem>
               <Link smooth to={'/'}>
@@ -89,16 +89,16 @@ const Header: React.FC = () => {
               </Link>
             </ListItem>
           </List>
-        </Toggle>
+        </Toggle> */}
       </Container>
-      <Socials toggle={openMenu}>
+      {/* <Socials toggle={openMenu}>
         <SocialItem>
           <A href={'#'}>LinkedIn</A>
         </SocialItem>
         <SocialItem>
           <A href={'#'}>Instagram</A>
         </SocialItem>
-      </Socials>
+      </Socials> */}
     </>
   );
 };

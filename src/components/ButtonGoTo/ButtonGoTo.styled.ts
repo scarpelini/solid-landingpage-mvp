@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-export const Button = styled.button.attrs({ type: 'button' })``;
+export const Button = styled.button.attrs({ type: 'button' })`
+  transition: opacity 0.25s ease-in-out 0s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+`;
 
 export const Description = styled.p`
   font-size: ${({ theme: { typography } }) => typography.button1.fontSize};

@@ -25,7 +25,7 @@ const SayHiLayout: React.FC<Props> = (props: Props) => {
     <Container {...props}>
       <Subtitle>{t('sayHi:subtitle')}</Subtitle>
       <Heading label={t('sayHi:title')} />
-      <SayHi href="#">{t('sayHi:button.sayHi')}</SayHi>
+      <SayHi href="mailto:">{t('sayHi:button.sayHi')}</SayHi>
       <Footer>
         <Socials>
           <SocialItem>

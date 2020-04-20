@@ -37,12 +37,11 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   z-index: 10;
   padding: 3rem 0;
-  transform: translateX(-50%);
   width: 100%;
 `;
 
@@ -81,7 +80,7 @@ export const ButtonBookNow = styled(Link)`
   font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
   font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
   color: ${({ theme: { colors } }) => colors.error};
-  margin-right: 9rem;
+  /* margin-right: 9rem; */
   text-decoration: none;
   letter-spacing: 0.69pt;
 

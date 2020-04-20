@@ -12,6 +12,7 @@ import {
   Footer,
   Label,
   Button,
+  ButtonShape,
 } from './OurManifesto.styled';
 
 interface Props {
@@ -19,11 +20,14 @@ interface Props {
 }
 
 const OurManifestoLayout: React.FC<Props> = (props: Props) => {
-  const movie = useRef(null);
+  const movie = useRef<HTMLVideoElement | null>(null);
   const { t } = useTranslation(['common', 'ourManifesto']);
 
   useEffect(() => {
-    console.log(movie.current);
+    if (movie) {
+      // movie.current?.play();
+      // movie.current.play();
+    }
   }, []);
 
   return (
@@ -34,13 +38,15 @@ const OurManifestoLayout: React.FC<Props> = (props: Props) => {
           __html: t('ourManifesto:text'),
         }}
       />
-      <Video ref={movie}>
-        <Source src={Movie} type="video/mp4" />
+      <Video ref={movie} autoPlay muted playsInline loop>
+        <Source src={Movie} type={'video/mp4'} />
         {/* <source src="movie.ogg" type="video/ogg"> */}
       </Video>
       <Footer>
-        <Label>{t('common:button.noDreamComes')}</Label>
-        <Button to={'/'}>{t('common:button.BookUsNow')}</Button>
+        <Button to={'/'}>
+          <Label>{t('common:button.noDreamComes')}</Label>
+          <ButtonShape>{t('common:button.BookUsNow')}</ButtonShape>
+        </Button>
       </Footer>
     </Container>
   );
