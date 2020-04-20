@@ -17,6 +17,14 @@ export const Wrap = styled.div`
   @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
     padding: 0 4rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding: 0 2.6rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding: 0 2rem;
+  }
 `;
 
 export const Image = styled.img`
@@ -90,6 +98,14 @@ export const ButtonBookNow = styled(Link)`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
     margin-right: 3.1rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    margin-right: 2rem;
+
+    &:before {
+      margin: 0 1rem;
+    }
   }
 `;
 

@@ -2,9 +2,7 @@ import React from 'react';
 
 import { Container, Title } from './ButtonText.styled';
 
-interface Props {}
-
-const ButtonText: React.FC<Props> = (props: Props) => {
+const ButtonText: React.FC = () => {
   return (
     <Container>
       <Title>ButtonText</Title>

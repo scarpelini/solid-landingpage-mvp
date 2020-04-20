@@ -15,9 +15,14 @@ const H1 = styled.h1`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
-    font-size: 4rem;
+    font-size: ${({ theme: { typography } }) => typography.body4.fontSize};
     line-height: 8rem;
     text-align: left;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    font-family: ${({ theme: { typography } }) => typography.h1.fontFamily};
+    font-weight: normal;
   }
 `;
 

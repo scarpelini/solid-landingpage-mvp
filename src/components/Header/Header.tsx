@@ -22,9 +22,9 @@ import {
   SocialItem,
 } from './Header.styled';
 
-interface Props {}
+// interface Props {}
 
-const Header: React.FC<Props> = (props: Props) => {
+const Header: React.FC = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const { t } = useTranslation(['common', 'header']);
   // const dispatch = useDispatch();

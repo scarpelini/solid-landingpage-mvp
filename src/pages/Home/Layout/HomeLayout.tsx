@@ -9,12 +9,20 @@ import Companies from '../../Companies/Companies';
 import SayHi from '../../SayHi/SayHi';
 
 import { Container, ButtonGoTo } from 'components';
-import { Home, Title, List, ListItem, Text, Footer } from './HomeLayout.styled';
+import {
+  Home,
+  Title,
+  List,
+  ListItem,
+  Text,
+  Footer,
+  MobileText,
+} from './HomeLayout.styled';
 
 const HomeLayout: React.FC = () => {
-  const { t } = useTranslation(['home']);
+  const { t } = useTranslation(['header', 'home']);
 
-  const list: string[] = t('list', {
+  const list: string[] = t('home:content', {
     returnObjects: true,
   });
 
@@ -23,9 +31,11 @@ const HomeLayout: React.FC = () => {
       <Home>
         <Title
           dangerouslySetInnerHTML={{
-            __html: t('title'),
+            __html: t('home:title'),
           }}
         />
+        <MobileText>{t('header:immediateAvailability')}</MobileText>
+        <MobileText>{t('header:investment')}</MobileText>
         <List>
           {list.map((item, i: number) => (
             <ListItem key={`homeLayout-${i}`}>

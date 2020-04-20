@@ -47,8 +47,7 @@ declare module 'styled-components' {
     };
     breakpoints: {
       mobileS: string;
-      mobileM: string;
-      mobileL: string;
+      mobile: string;
       tablet: string;
       laptop: string;
       laptopL: string;

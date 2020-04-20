@@ -18,6 +18,18 @@ export const Home = styled.section`
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     align-items: flex-start;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding-top: 11rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: auto;
+  }
+
+  @media (max-height: 690px) {
+    padding-top: 11rem;
+    height: auto;
+  }
 `;
 
 export const Title = styled(H1)`
@@ -37,8 +49,32 @@ export const Title = styled(H1)`
     margin-bottom: 7.3rem;
   }
 
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    margin-bottom: 7.6rem;
+    max-width: 300px;
+  }
+
   @media (min-width: 1025px) and (max-height: 720px) {
     margin-bottom: 8rem;
+  }
+`;
+
+export const MobileText = styled.p`
+  display: none;
+  font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
+  font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
+
+  padding-left: 2.7rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.69pt;
+  text-transform: uppercase;
+
+  &:not(:last-of-type) {
+    margin-bottom: 2.2rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    display: block;
   }
 `;
 
@@ -58,6 +94,11 @@ export const List = styled.ul`
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    order: 3;
+    padding: 0 2.2rem 0 2.7rem;
   }
 `;
 
@@ -85,7 +126,7 @@ export const Text = styled.p`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
     font-size: calc(
-      ${({ theme: { typography } }) => typography.body2.fontSize} - 1rem
+      ${({ theme: { typography } }) => typography.body2.fontSize} - 0.9rem
     );
   }
 
@@ -100,6 +141,18 @@ export const Footer = styled.footer`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     align-self: center;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    order: 2;
+    position: relative;
+    bottom: auto;
+    margin-top: 7.4rem;
+    margin-bottom: 11.3rem;
+  }
+
+  @media (max-height: 690px) {
+    position: relative;
   }
 `;
 

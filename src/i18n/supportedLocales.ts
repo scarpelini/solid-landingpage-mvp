@@ -1,9 +1,9 @@
-export const defaultLocale = 'pt-BR';
+export const defaultLocale = 'en-US';
 
 export const supportedLocales = {
   'pt-BR': {
-    common: require('./locales/pt-BR/common.json'),
-    home: require('./locales/pt-BR/home.json'),
+    // common: require('./locales/pt-BR/common.json'),
+    // home: require('./locales/pt-BR/home.json'),
   },
   'en-US': {
     common: require('./locales/en-US/common.json'),
