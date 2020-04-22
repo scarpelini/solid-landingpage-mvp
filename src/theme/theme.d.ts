@@ -50,7 +50,6 @@ declare module 'styled-components' {
       mobile: string;
       tablet: string;
       laptop: string;
-      laptopL: string;
       desktop: string;
     };
     typography: Typography;

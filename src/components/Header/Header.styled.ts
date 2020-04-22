@@ -11,10 +11,11 @@ export const Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 0 7rem;
   max-width: 1770px;
   width: 100%;
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     padding: 0 4rem;
   }
 
@@ -95,12 +96,13 @@ export const ButtonBookNow = styled(Link)`
     height: 0.1rem;
   }
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
-    margin-right: 3.1rem;
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
+    /* margin-right: 3.1rem; */
+    margin-right: 0;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 
     &:before {
       margin: 0 1rem;
@@ -225,7 +227,7 @@ export const Socials = styled.ul<MenuProps>`
   transition: opacity 0.25s ease-in-out 0.5s, visibility 0.25s ease-in-out 0s;
   pointer-events: none;
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     flex-direction: column;
     left: 40px;
     bottom: 30px;

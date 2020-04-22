@@ -20,7 +20,7 @@ export const Container = styled.section`
     }
   }
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     header {
       padding-left: 2.4rem;
       padding-right: 2.4rem;
@@ -106,7 +106,7 @@ export const SayHi = styled.a`
     padding-right: 5.2rem;
   }
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
     font-size: 8rem;

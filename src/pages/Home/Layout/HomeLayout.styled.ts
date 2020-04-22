@@ -86,7 +86,7 @@ export const List = styled.ul`
   flex-direction: row;
   margin-bottom: 7.8rem;
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     max-width: 1050px;
   }
 
@@ -128,7 +128,7 @@ export const Text = styled.p`
   text-align: center;
   line-height: 4rem;
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     font-size: calc(
       ${({ theme: { typography } }) => typography.body2.fontSize} - 0.9rem
     );

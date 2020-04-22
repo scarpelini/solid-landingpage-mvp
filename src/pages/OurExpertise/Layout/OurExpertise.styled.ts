@@ -36,6 +36,7 @@ export const Content = styled.div`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 

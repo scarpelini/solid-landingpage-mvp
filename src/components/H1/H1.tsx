@@ -9,7 +9,7 @@ const H1 = styled.h1`
   text-align: center;
   line-height: 10.7rem;
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.laptopL} {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     font-size: 6rem;
     line-height: 8.7rem;
   }
