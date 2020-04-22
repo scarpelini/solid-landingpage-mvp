@@ -75,6 +75,9 @@ export const ListItem = styled.li`
 
 export const Title = styled.h3`
   font-size: ${({ theme: { typography } }) => typography.subtitle1.fontSize};
+  font-family: ${({ theme: { typography } }) =>
+    typography.subtitle1.fontFamily};
+  font-weight: 500;
   margin-bottom: 3.9rem;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -88,6 +91,7 @@ export const Title = styled.h3`
 export const Description = styled.p`
   color: ${({ theme: { colors } }) => colors.secondary};
   font-size: ${({ theme: { typography } }) => typography.h2.fontSize};
+  font-family: ${({ theme: { typography } }) => typography.body2.fontFamily};
   line-height: 4.2rem;
   max-width: 652px;
 `;

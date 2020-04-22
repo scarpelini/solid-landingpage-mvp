@@ -28,7 +28,7 @@ const HomeLayout: React.FC = () => {
 
   return (
     <Container>
-      <Home>
+      <Home id={'home'}>
         <Title
           dangerouslySetInnerHTML={{
             __html: t('home:title'),
@@ -44,7 +44,7 @@ const HomeLayout: React.FC = () => {
           ))}
         </List>
         <Footer>
-          <ButtonGoTo onClick={() => console.log('Scroll To!')} />
+          <ButtonGoTo />
         </Footer>
       </Home>
       <OurExpertise id={'our-expertise'} />

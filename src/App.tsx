@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import RootContainer from './RootContainer';
 import storeConfig from 'config/storeConfig';
@@ -8,6 +9,8 @@ import storeConfig from 'config/storeConfig';
 const { store, persistor } = storeConfig();
 
 const App: React.FC = () => {
+  smoothscroll.polyfill();
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>

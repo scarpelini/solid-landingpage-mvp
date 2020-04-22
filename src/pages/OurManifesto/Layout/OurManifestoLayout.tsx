@@ -2,18 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Movie from 'res/videos/video.mp4';
-import { Heading } from 'components';
+import { Heading, ButtonMailto } from 'components';
 
-import {
-  Container,
-  Text,
-  Video,
-  Source,
-  Footer,
-  Label,
-  Button,
-  ButtonShape,
-} from './OurManifesto.styled';
+import { Container, Text, Video, Source } from './OurManifesto.styled';
 
 interface Props {
   id: string;
@@ -42,12 +33,10 @@ const OurManifestoLayout: React.FC<Props> = (props: Props) => {
         <Source src={Movie} type={'video/mp4'} />
         {/* <source src="movie.ogg" type="video/ogg"> */}
       </Video>
-      <Footer>
-        <Button to={'/'}>
-          <Label>{t('common:button.noDreamComes')}</Label>
-          <ButtonShape>{t('common:button.BookUsNow')}</ButtonShape>
-        </Button>
-      </Footer>
+      <ButtonMailto
+        title={t('common:button.noDreamComes')}
+        label={t('common:button.BookUsNow')}
+      />
     </Container>
   );
 };

@@ -25,14 +25,26 @@ const SayHiLayout: React.FC<Props> = (props: Props) => {
     <Container {...props}>
       <Subtitle>{t('sayHi:subtitle')}</Subtitle>
       <Heading label={t('sayHi:title')} />
-      <SayHi href="mailto:">{t('sayHi:button.sayHi')}</SayHi>
+      <SayHi href={t('common:mailto')}>{t('sayHi:button.sayHi')}</SayHi>
       <Footer>
         <Socials>
           <SocialItem>
-            <A href="#">Linkedin</A>
+            <A
+              href={'https://www.linkedin.com/company/solidsolutions'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
+            >
+              Linkedin
+            </A>
           </SocialItem>
           <SocialItem>
-            <A href="#">Instagram</A>
+            <A
+              href={'https://www.instagram.com/solidsolutions.io/'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
+            >
+              Instagram
+            </A>
           </SocialItem>
         </Socials>
         <Local>

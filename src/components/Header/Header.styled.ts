@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
 
-import { Link } from 'react-router-dom';
-
 interface MenuProps {
   toggle?: boolean;
 }
@@ -28,6 +26,8 @@ export const Wrap = styled.div`
   }
 `;
 
+export const ButtonLogo = styled.button.attrs({ type: 'button' })``;
+
 export const Image = styled.img`
   position: relative;
   z-index: 11;
@@ -51,6 +51,7 @@ export const Text = styled.p`
   font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
   text-transform: uppercase;
   letter-spacing: 0.69pt;
+  font-weight: normal;
   line-height: 1.6rem;
 `;
 
@@ -77,13 +78,19 @@ export const Nav = styled.nav`
   }
 `;
 
-export const ButtonBookNow = styled(Link)`
+export const ButtonBookNow = styled.a`
   font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
   font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
   color: ${({ theme: { colors } }) => colors.error};
   /* margin-right: 9rem; */
   text-decoration: none;
+  font-weight: normal;
   letter-spacing: 0.69pt;
+  transition: color 0.25s ease-in-out 0s;
+
+  &:hover {
+    color: ${({ theme: { colors } }) => colors.onSecondary};
+  }
 
   &:before {
     background-color: ${({ theme: { colors } }) => colors.primary};

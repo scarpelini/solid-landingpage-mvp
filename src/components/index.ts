@@ -10,3 +10,4 @@ export { default as Button } from './Button/Button';
 export { default as ButtonText } from './ButtonText/ButtonText';
 export { default as ButtonGoTo } from './ButtonGoTo/ButtonGoTo';
 export { default as ButtonIcon } from './ButtonIcon/ButtonIcon';
+export { default as ButtonMailto } from './ButtonMailto/ButtonMailto';

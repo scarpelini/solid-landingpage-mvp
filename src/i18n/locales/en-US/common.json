@@ -14,5 +14,6 @@
     "BookUsNow": "Book us now"
   },
   "city": "São Paulo,",
-  "country": "Brazil"
+  "country": "Brazil",
+  "mailto": "mailto:hello@solidsolutions.io?subject=Help with MVP development!&body=Hello, my name is [your name] and I'm a [Brand Strategist/Creative Director/CMO/CEO] at [your Company Name]. [Please, add some details about your current business needs]"
 }

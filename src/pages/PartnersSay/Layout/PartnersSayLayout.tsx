@@ -4,7 +4,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import { Carousel } from 'react-responsive-carousel';
 
 import IconLinkedIn from 'res/svg/icon-linkedin.svg';
-import { Heading, ButtonIcon } from 'components';
+import { Heading, ButtonMailto, ButtonIcon } from 'components';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {
@@ -24,6 +24,7 @@ interface ListProps {
   picture: string;
   name: string;
   message: string;
+  linkedin: string;
 }
 
 const PartnersSayLayout: React.FC<Props> = (props: Props) => {
@@ -53,9 +54,12 @@ const PartnersSayLayout: React.FC<Props> = (props: Props) => {
                   i18nKey={`partners:list.${i}.name`}
                   components={[
                     <ButtonIcon
+                      variant={'a'}
                       key={'icon-linkedIn'}
+                      href={item.linkedin}
                       asset={IconLinkedIn}
-                      link={'/'}
+                      target={'_blank'}
+                      rel={'noopener noreferrer'}
                     />,
                   ]}
                 />
@@ -64,6 +68,10 @@ const PartnersSayLayout: React.FC<Props> = (props: Props) => {
           </CarouselItem>
         ))}
       </Carousel>
+      <ButtonMailto
+        title={t('partners:cta.title')}
+        label={t('partners:cta.label')}
+      />
     </Container>
   );
 };

@@ -71,7 +71,7 @@ export const Subtitle = styled.h2`
 export const SayHi = styled.a`
   color: ${({ theme: { colors } }) => colors.primary};
   font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
-  font-weight: 600;
+  font-weight: normal;
   display: inline-block;
   position: relative;
   margin-bottom: 22.6rem;
@@ -159,6 +159,10 @@ export const Socials = styled.ul`
 `;
 
 export const SocialItem = styled.li`
+  a {
+    font-weight: normal;
+  }
+
   &:not(:last-child) {
     margin-right: 5.1rem;
   }
@@ -179,6 +183,7 @@ export const Text = styled.p`
   font-size: ${({ theme: { typography } }) => typography.body4.fontSize};
   font-family: ${({ theme: { typography } }) => typography.body4.fontFamily};
   line-height: 4rem;
+  font-weight: normal;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     font-size: 2.8rem;

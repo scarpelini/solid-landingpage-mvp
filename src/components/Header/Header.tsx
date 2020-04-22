@@ -9,6 +9,7 @@ import Logo from 'res/svg/solid-logotype.svg';
 // import { A } from 'components';
 import {
   Container,
+  ButtonLogo,
   Image,
   Text,
   Nav,
@@ -33,15 +34,30 @@ const Header: React.FC = () => {
   // const nextLanguage = language === 'pt-BR' ? 'en-US' : 'pt-BR';
   // const nextTheme = currentTheme === 'light' ? 'Dark' : 'Light';
 
+  function scrollToTop() {
+    const rootElement = document.getElementById('root');
+
+    if (rootElement) {
+      rootElement.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  }
+
   return (
     <>
       <Container>
         <Wrap>
-          <Image src={Logo} />
+          <ButtonLogo onClick={() => scrollToTop()}>
+            <Image src={Logo} />
+          </ButtonLogo>
           <Nav>
             <Text>{t('header:investment')}</Text>
             <Text>{t('header:immediateAvailability')}</Text>
-            <ButtonBookNow to={'/'}>{t('common:button.bookNow')}</ButtonBookNow>
+            <ButtonBookNow href={t('common:mailto')}>
+              {t('common:button.bookNow')}
+            </ButtonBookNow>
             {/* <Hamb onClick={() => setOpenMenu(!openMenu)} toggle={openMenu} /> */}
           </Nav>
         </Wrap>

@@ -9,6 +9,14 @@ export const A = styled(Link)`
   }
 `;
 
+export const Anchor = styled.a`
+  transition: opacity 0.25s ease-in-out 0s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+`;
+
 export const Icon = styled.img`
   position: relative;
   top: 14px;

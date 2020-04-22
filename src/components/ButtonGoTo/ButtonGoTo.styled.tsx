@@ -1,10 +1,28 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const bounce = keyframes`
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(7px);
+  }
+`;
+
+export const Icon = styled.img`
+  margin-top: 1.2rem;
+`;
 
 export const Button = styled.button.attrs({ type: 'button' })`
-  transition: opacity 0.25s ease-in-out 0s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 
   &:hover {
-    opacity: 0.6;
+    ${Icon} {
+      animation: ${bounce} 0.3s infinite alternate;
+    }
   }
 `;
 
@@ -25,8 +43,4 @@ export const Label = styled.p`
   color: ${({ theme: { colors } }) => colors.error};
   text-transform: uppercase;
   letter-spacing: 0.69pt;
-`;
-
-export const Icon = styled.img`
-  margin-top: 1.2rem;
 `;
