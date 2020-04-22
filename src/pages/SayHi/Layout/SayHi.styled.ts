@@ -68,75 +68,12 @@ export const Subtitle = styled.h2`
   }
 `;
 
-export const SayHi = styled.a`
-  color: ${({ theme: { colors } }) => colors.primary};
-  font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
-  font-weight: normal;
-  display: inline-block;
-  position: relative;
-  margin-bottom: 22.6rem;
-  font-size: 11rem;
-  letter-spacing: 0.69pt;
-  line-height: 10.7rem;
-  text-decoration: none;
-  transition: color 0.25s ease-in-out 0s;
-
-  &:after {
-    background-color: ${({ theme: { colors } }) => colors.primary};
-    content: '';
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    bottom: -16px;
-    width: calc(100% - 3rem);
-    height: 0.2rem;
-    transition: background-color 0.25s ease-in-out 0s;
-  }
-
-  &:hover {
-    color: ${({ theme: { colors } }) => colors.secondary};
-
-    &:after {
-      background-color: ${({ theme: { colors } }) => colors.secondary};
-    }
-  }
-
-  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
-    padding-left: 5.2rem;
-    padding-right: 5.2rem;
-  }
-
-  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    font-size: 8rem;
-    line-height: 9.7rem;
-
-    &:after {
-      left: 23px;
-      bottom: -5px;
-      width: calc(100% - 7rem);
-    }
-  }
-
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    font-size: ${({ theme: { typography } }) => typography.body4.fontSize};
-    font-weight: normal;
-    margin-bottom: 11.1rem;
-    line-height: 8rem;
-
-    &:after {
-      bottom: 12px;
-      width: calc(100% - 6rem);
-    }
-  }
-`;
-
 export const Footer = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 22.6rem;
   margin-bottom: 10rem;
 
   @media (max-width: 1049px) {
@@ -146,6 +83,7 @@ export const Footer = styled.footer`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 0;
   }
 `;
 
@@ -174,6 +112,7 @@ export const Local = styled.div`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     order: 1;
+    margin-top: 11.1rem;
     padding: 0 0 14.8rem 2.7rem;
   }
 `;
@@ -187,5 +126,106 @@ export const Text = styled.p`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     font-size: 2.8rem;
+  }
+`;
+
+export const CtaText = styled.span`
+  color: ${({ theme: { colors } }) => colors.primary};
+  font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+  font-size: 11rem;
+  letter-spacing: 0.69pt;
+  line-height: 10.7rem;
+  transition: color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+  &:last-of-type {
+    &:after {
+      background-color: ${({ theme: { colors } }) => colors.primary};
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 33px;
+      bottom: -16px;
+      width: 0%;
+      height: 0.2rem;
+      transition: width 0.25s ease-in-out 0s;
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    font-size: 8rem;
+    line-height: 9.7rem;
+
+    &:last-of-type {
+      &:after {
+        bottom: -5px;
+        right: 48px;
+      }
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    font-size: ${({ theme: { typography } }) => typography.body4.fontSize};
+    font-weight: normal;
+    line-height: 8rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      &:after {
+        right: 37px;
+        bottom: 12px;
+      }
+    }
+  }
+`;
+
+export const Cta = styled.a`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+
+  &:hover {
+    ${CtaText} {
+      &:last-of-type {
+        &:after {
+          left: 1px;
+          right: auto;
+          width: calc(100% - 3.4rem);
+        }
+      }
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
+    &:hover {
+      ${CtaText} {
+        &:last-of-type {
+          &:after {
+            left: 24px;
+            right: auto;
+            width: calc(100% - 7.2rem);
+          }
+        }
+      }
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    &:hover {
+      ${CtaText} {
+        &:last-of-type {
+          &:after {
+            right: auto;
+            width: calc(100% - 6.1rem);
+          }
+        }
+      }
+    }
   }
 `;

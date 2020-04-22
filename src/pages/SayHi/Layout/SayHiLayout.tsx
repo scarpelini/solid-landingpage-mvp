@@ -1,17 +1,18 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Heading, A } from 'components';
+import { A } from 'components';
 
 import {
   Container,
-  SayHi,
   Subtitle,
   Footer,
   Socials,
   SocialItem,
   Local,
   Text,
+  Cta,
+  CtaText,
 } from './SayHi.styled';
 
 interface Props {
@@ -24,8 +25,10 @@ const SayHiLayout: React.FC<Props> = (props: Props) => {
   return (
     <Container {...props}>
       <Subtitle>{t('sayHi:subtitle')}</Subtitle>
-      <Heading label={t('sayHi:title')} />
-      <SayHi href={t('common:mailto')}>{t('sayHi:button.sayHi')}</SayHi>
+      <Cta href={t('common:mailto')}>
+        <CtaText dangerouslySetInnerHTML={{ __html: t('sayHi:title') }} />
+        <CtaText>{t('sayHi:button.sayHi')}</CtaText>
+      </Cta>
       <Footer>
         <Socials>
           <SocialItem>

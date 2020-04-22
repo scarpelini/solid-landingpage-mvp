@@ -47,6 +47,11 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     height: 100%;
   }
+
+  ::selection {
+    color: ${({ theme: { colors } }) => colors.background};
+    background-color: ${({ theme: { colors } }) => colors.secondary};
+  }
 `;
 
 export default GlobalStyle;
