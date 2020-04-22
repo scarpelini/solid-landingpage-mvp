@@ -107,6 +107,7 @@ export const ContainerText = styled.span`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  flex: 1;
 `;
 
 export const CarouselItem = styled.div`
@@ -118,7 +119,7 @@ export const CarouselItem = styled.div`
   ${PartnerName} {
     color: ${({ theme: { colors } }) => colors.primary};
     font-size: ${({ theme: { typography } }) => typography.subtitle1.fontSize};
-    max-width: 810px;
+    max-width: 100%;
     line-height: 7.2rem;
     text-align: left;
   }

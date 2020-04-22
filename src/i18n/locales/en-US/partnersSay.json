@@ -7,14 +7,19 @@
       "message": "<p>I thought that features would be best created in a certain way, but SOLID had the expertise to recommend more sensible solutions. You're hiring experts, so leverage them.</p>"
     },
     {
-      "picture": "anthony-banks.jpg",
-      "name": "Anthony Banks, Owner <0/> <br>Notist",
-      "message": "<p>I thought that features would be best created in a certain way, but SOLID had the expertise to recommend more sensible solutions. You're hiring experts, so leverage them.</p>"
+      "picture": "paulo-vischi.jpg",
+      "name": "Paulo Vischi, Founder and Head of Purpose-led Strategy <0/> <br>Be Consulting",
+      "message": "<p>“They're capable of seeing far beyond the technology and the visual aspects.”</p>"
     },
     {
-      "picture": "anthony-banks.jpg",
-      "name": "Anthony Banks, Owner <0/> <br>Notist",
-      "message": "<p>I thought that features would be best created in a certain way, but SOLID had the expertise to recommend more sensible solutions. You're hiring experts, so leverage them.</p>"
+      "picture": "jorge-perez.jpg",
+      "name": "Jorge Perez, Client Manager <0/> <br>ZOLY - Data-driven Agency",
+      "message": "<p>“They’re definitely a company that I would recommend to anyone who is seeking technological excellence and commitment to the job.”</p>"
+    },
+    {
+      "picture": "victor-odo.jpg",
+      "name": "Victor Hugo Odo, IT & CT Manager <0/> <br>WMcCANN",
+      "message": "<p>“With a tireless team of highly skilled professionals, projects are developed with great quality. I highly recommend for complex or delicate projects.”</p>"
     }
   ]
 }

@@ -1,13 +1,21 @@
 {
   "title": "Companies we are<br>fortunate to work with",
   "list": [
-    { "picture": "cpbr.png", "alt": "cc" },
-    { "picture": "dm9.png", "alt": "DM9" },
-    { "picture": "fcb.png", "alt": "cc" },
-    { "picture": "ginga.png", "alt": "Ginga" },
-    { "picture": "ginga.png", "alt": "Ginga" },
-    { "picture": "fcb.png", "alt": "cc" },
-    { "picture": "dm9.png", "alt": "DM9" },
-    { "picture": "cpbr.png", "alt": "cc" }
+    { "picture": "unilever.svg", "alt": "Unilever", "className": "unilever" },
+    { "picture": "pepsico.svg", "alt": "PepsiCo", "className": "pepsico" },
+    { "picture": "visa.svg", "alt": "Visa", "className": "visa" },
+    {
+      "picture": "hp.svg",
+      "alt": "Hewlett-Packard Company",
+      "className": "hp"
+    },
+    { "picture": "kia.svg", "alt": "Kia Motors Company", "className": "kia" },
+    { "picture": "citroen.svg", "alt": "Citroën", "className": "citroen" },
+    {
+      "picture": "campus-party.svg",
+      "alt": "Campus Party Brasil",
+      "className": "campus-party"
+    },
+    { "picture": "globo.svg", "alt": "Rede Globo", "className": "globo" }
   ]
 }

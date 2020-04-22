@@ -10,6 +10,7 @@ interface Props {
 }
 
 interface ListProps {
+  className: string;
   picture: string;
   alt: string;
 }
@@ -26,8 +27,11 @@ const CompaniesLayout: React.FC<Props> = (props: Props) => {
       <Heading label={t('title')} />
       <List>
         {list.map((item, i: number) => (
-          <ListItem key={`company-${i}`}>
-            <Asset src={require(`res/images/companies/${item.picture}`)} />
+          <ListItem key={`company-${i}`} className={item.className}>
+            <Asset
+              src={require(`res/svg/logos/${item.picture}`)}
+              alt={item.alt}
+            />
           </ListItem>
         ))}
       </List>

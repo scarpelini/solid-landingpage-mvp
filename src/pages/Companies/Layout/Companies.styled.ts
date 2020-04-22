@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const Asset = styled.img``;
+
 export const Container = styled.section`
   padding-top: 20.6rem;
 
@@ -34,7 +36,6 @@ export const List = styled.ul`
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1263px;
-  background-color: black;
 
   @media (max-width: 1279px) {
     max-width: 664px;
@@ -51,6 +52,52 @@ export const ListItem = styled.li`
   align-items: center;
   width: 31.5rem;
   height: 20rem;
-`;
 
-export const Asset = styled.img``;
+  &.hp {
+    ${Asset} {
+      width: 7.5rem;
+    }
+  }
+
+  &.kia {
+    ${Asset} {
+      width: 11.5rem;
+    }
+  }
+
+  &.citroen {
+    ${Asset} {
+      width: 9.5rem;
+    }
+  }
+
+  &.globo {
+    ${Asset} {
+      width: 7.5rem;
+    }
+  }
+
+  &.campus-party {
+    ${Asset} {
+      width: 16rem;
+    }
+  }
+
+  &.visa {
+    ${Asset} {
+      width: 12.5rem;
+    }
+  }
+
+  &.unilever {
+    ${Asset} {
+      width: 8.5rem;
+    }
+  }
+
+  &.pepsico {
+    ${Asset} {
+      width: 17rem;
+    }
+  }
+`;
