@@ -6,7 +6,6 @@ import Slider from 'react-slick';
 import IconLinkedIn from 'res/svg/icon-linkedin.svg';
 import { Heading, ButtonMailto, ButtonIcon } from 'components';
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {
   Container,
   CarouselItem,
