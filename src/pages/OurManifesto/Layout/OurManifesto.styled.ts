@@ -19,7 +19,7 @@ export const Container = styled.section`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    padding-top: 16.7rem;
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
 
@@ -107,7 +107,6 @@ export const Video = styled.video`
   background-color: ${({ theme: { colors } }) => colors.secondary};
   margin-top: 9.8rem;
   width: 100%;
-  /* height: 72.6rem; */
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     margin-top: 7rem;

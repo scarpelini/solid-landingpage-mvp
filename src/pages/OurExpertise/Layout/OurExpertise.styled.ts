@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const Source = styled.source``;
+
 export const Container = styled.section`
   header {
     margin-bottom: 11.2rem;
@@ -59,12 +61,15 @@ export const Content = styled.div`
 `;
 
 export const Col = styled.div`
+  position: relative;
+  z-index: 1;
   max-width: 50%;
   width: 100%;
 
   &:last-of-type {
     display: flex;
     justify-content: center;
+    z-index: 0;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -115,6 +120,16 @@ export const Description = styled.p`
 `;
 
 export const Image = styled.img`
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    margin-top: 4rem;
+  }
+`;
+
+export const Video = styled.video`
+  @media ${({ theme: { breakpoints } }) => breakpoints.laptop} {
+    width: 100rem;
+  }
+
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     margin-top: 4rem;
   }

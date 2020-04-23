@@ -7,7 +7,8 @@ import LineM1 from 'res/svg/line-m-1.svg';
 import LineM2 from 'res/svg/line-m-2.svg';
 import LineM3 from 'res/svg/line-m-3.svg';
 import LineM4 from 'res/svg/line-m-4.svg';
-import Device from 'res/svg/device.svg';
+import Movie1 from 'res/videos/device.mp4';
+import Movie2 from 'res/videos/device.ogg';
 
 import { Heading, Marquee } from 'components';
 
@@ -21,7 +22,8 @@ import {
   ListItem,
   Title,
   Description,
-  Image,
+  Video,
+  Source,
 } from './OurExpertise.styled';
 
 interface Props {
@@ -66,7 +68,10 @@ const OurExpertiseLayout: React.FC<Props> = (props: Props) => {
             </List>
           </Col>
           <Col>
-            <Image src={Device} />
+            <Video autoPlay muted playsInline loop>
+              <Source src={Movie1} type={'video/mp4'} />
+              <Source src={Movie2} type={'video/ogg'} />
+            </Video>
           </Col>
         </Content>
       </Container>
