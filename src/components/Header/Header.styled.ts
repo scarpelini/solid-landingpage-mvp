@@ -58,11 +58,16 @@ export const Text = styled.p`
 export const Nav = styled.nav`
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   ${Text}:first-of-type {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  ${Text}:last-of-type {
+    margin-right: 3.1rem;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.laptop} {
@@ -82,37 +87,43 @@ export const ButtonBookNow = styled.a`
   font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
   font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
   color: ${({ theme: { colors } }) => colors.error};
-  /* margin-right: 9rem; */
+  position: relative;
+  padding: 2.6rem 5.1rem;
   text-decoration: none;
   font-weight: normal;
   letter-spacing: 0.69pt;
-  transition: color 0.25s ease-in-out 0s;
+  transition: color 0.25s ease-in-out 0s, background-color 0.25s ease-in-out 0s;
 
   &:hover {
-    color: ${({ theme: { colors } }) => colors.onSecondary};
+    color: ${({ theme: { colors } }) => colors.background};
+    background-color: ${({ theme: { colors } }) => colors.error};
+
+    &:before {
+      opacity: 0;
+    }
   }
 
   &:before {
     background-color: ${({ theme: { colors } }) => colors.primary};
+
     content: '';
     display: inline-block;
-    position: relative;
-    top: -4px;
+    position: absolute;
+    top: 34px;
+    left: -31px;
     margin: 0 2rem;
     width: 4.2rem;
     height: 0.1rem;
+    transition: opacity 0.1s ease-in-out 0s;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
-    /* margin-right: 3.1rem; */
     margin-right: 0;
   }
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
-    /* margin-right: 2rem; */
-
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     &:before {
-      margin: 0 1rem;
+      display: none;
     }
   }
 `;

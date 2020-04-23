@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.section`
   header {
@@ -25,6 +25,24 @@ export const Container = styled.section`
     h1 {
       max-width: 320px;
     }
+  }
+`;
+
+export const ContainerMarquee = styled.div`
+  margin: 5rem 0 15.1rem 0;
+  display: block;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    display: none;
+  }
+`;
+
+export const ContainerMarqueeMobile = styled.div`
+  margin: 2rem 0 11.6rem 0;
+  display: none;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    display: block;
   }
 `;
 
@@ -96,40 +114,8 @@ export const Description = styled.p`
   max-width: 652px;
 `;
 
-export const marquee = keyframes`
-  from {
-    transform: translate3d(calc(-25% + 20vw), 0, 0);
-  }
-  to {
-    transform: translate3d(calc(-50% + 20vw), 0, 0);
-  }
-`;
-
-export const Lines = styled.div`
-  position: relative;
-  margin: 8.7rem 0 15.1rem 0;
-
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    margin: 9.4rem 0 11.6rem 0;
-  }
-`;
-
-export const LinesWrap = styled.div`
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transform: translate3d(calc(-25% + 20vw), 0, 0);
-  animation: ${marquee} 5s linear infinite;
-`;
-
 export const Image = styled.img`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     margin-top: 4rem;
   }
-`;
-
-export const Line = styled.img`
-  max-width: initial;
-  transform: translateX(-20%);
 `;

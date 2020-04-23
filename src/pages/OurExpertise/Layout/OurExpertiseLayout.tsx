@@ -1,13 +1,20 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import LineAsset1 from 'res/svg/line-1.svg';
-import LineAsset2 from 'res/svg/line-2.svg';
+import Line1 from 'res/svg/line-1.svg';
+import Line2 from 'res/svg/line-2.svg';
+import LineM1 from 'res/svg/line-m-1.svg';
+import LineM2 from 'res/svg/line-m-2.svg';
+import LineM3 from 'res/svg/line-m-3.svg';
+import LineM4 from 'res/svg/line-m-4.svg';
 import Device from 'res/svg/device.svg';
-import { Heading } from 'components';
+
+import { Heading, Marquee } from 'components';
 
 import {
   Container,
+  ContainerMarquee,
+  ContainerMarqueeMobile,
   Content,
   Col,
   List,
@@ -15,9 +22,6 @@ import {
   Title,
   Description,
   Image,
-  Lines,
-  LinesWrap,
-  Line,
 } from './OurExpertise.styled';
 
 interface Props {
@@ -38,15 +42,17 @@ const OurExpertiseLayout: React.FC<Props> = (props: Props) => {
 
   return (
     <>
+      <ContainerMarquee>
+        <Marquee asset={Line1} />
+        <Marquee asset={Line2} />
+      </ContainerMarquee>
+      <ContainerMarqueeMobile>
+        <Marquee asset={LineM1} />
+        <Marquee asset={LineM2} />
+        <Marquee asset={LineM3} time={'24s'} />
+        <Marquee asset={LineM4} />
+      </ContainerMarqueeMobile>
       <Container {...props}>
-        <Lines>
-          <LinesWrap>
-            <Line src={LineAsset1} />
-          </LinesWrap>
-          <LinesWrap>
-            <Line src={LineAsset2} />
-          </LinesWrap>
-        </Lines>
         <Heading label={t('title')} />
         <Content>
           <Col>

@@ -11,3 +11,4 @@ export { default as ButtonText } from './ButtonText/ButtonText';
 export { default as ButtonGoTo } from './ButtonGoTo/ButtonGoTo';
 export { default as ButtonIcon } from './ButtonIcon/ButtonIcon';
 export { default as ButtonMailto } from './ButtonMailto/ButtonMailto';
+export { default as Marquee } from './Marquee/Marquee';
