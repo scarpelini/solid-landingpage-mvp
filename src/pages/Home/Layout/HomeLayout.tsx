@@ -9,6 +9,9 @@ import Companies from '../../Companies/Companies';
 import SayHi from '../../SayHi/SayHi';
 
 import { Container, ButtonGoTo } from 'components';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'res/css/custom-slick.css';
 import {
   Home,
   Title,

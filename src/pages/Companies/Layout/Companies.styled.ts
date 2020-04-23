@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 
-export const Asset = styled.img``;
+export const Asset = styled.img`
+  margin: 0 auto;
+`;
 
 export const Container = styled.section`
+  position: relative;
   padding-top: 20.6rem;
 
   header {
     margin-bottom: 17.5rem;
+  }
+
+  .slick-slider {
+    display: none;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
@@ -21,6 +28,10 @@ export const Container = styled.section`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     padding: 12.6rem 2.5rem 0 2.5rem;
+
+    .slick-slider {
+      display: block;
+    }
 
     header h1 {
       max-width: 324px;
@@ -42,12 +53,13 @@ export const List = styled.ul`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    display: none;
     justify-content: center;
   }
 `;
 
 export const ListItem = styled.li`
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   width: 31.5rem;

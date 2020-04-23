@@ -41,8 +41,10 @@ const PartnersSayLayout: React.FC<Props> = (props: Props) => {
         showArrows={false}
         showStatus={false}
         showThumbs={false}
-        infiniteLoop={false}
+        infiniteLoop={true}
         emulateTouch={false}
+        autoPlay={true}
+        interval={7000}
       >
         {list.map((item, i: number) => (
           <CarouselItem key={`partners-say-${i}`}>

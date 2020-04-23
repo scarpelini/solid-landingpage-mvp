@@ -6,3 +6,4 @@ declare module '*.mp4' {
 }
 
 declare module 'smoothscroll-polyfill';
+declare module 'react-slick';
