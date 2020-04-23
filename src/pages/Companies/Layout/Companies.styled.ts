@@ -64,6 +64,7 @@ export const ListItem = styled.li`
   align-items: center;
   width: 31.5rem;
   height: 20rem;
+  outline: none;
 
   &.hp {
     ${Asset} {
@@ -111,5 +112,9 @@ export const ListItem = styled.li`
     ${Asset} {
       width: 17rem;
     }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    height: 16rem;
   }
 `;

@@ -19,7 +19,8 @@ export const Anchor = styled.a`
 
 export const Icon = styled.img`
   position: relative;
-  top: 14px;
+  top: 12px;
+  left: 5px;
   max-width: 40px;
   max-height: 40px;
 `;

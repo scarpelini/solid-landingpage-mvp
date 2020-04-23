@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const PartnerName = styled.p`
   position: relative;
 
+  a {
+    display: inline-block;
+  }
+
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     margin-top: 3.9rem;
     width: 100%;
@@ -25,47 +29,8 @@ export const Container = styled.section`
     margin-bottom: 19.3rem;
   }
 
-  .carousel {
-    img {
-      width: auto;
-    }
-
-    .slider-wrapper {
-      padding-bottom: 8.9rem;
-    }
-
-    .slide {
-      background-color: transparent;
-    }
-
-    .control-dots {
-      .dot {
-        background-color: ${({ theme: { colors } }) => colors.primary};
-        border: 0.2rem solid ${({ theme: { colors } }) => colors.primary};
-        margin: 0 1.1rem 0 0;
-        width: 1rem;
-        height: 1rem;
-        outline: none;
-        box-shadow: none;
-        opacity: 1;
-        transition: background-color 0.25s ease-in-out 0s,
-          border-color 0.25s ease-in-out 0s;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &:hover {
-          background-color: ${({ theme: { colors } }) => colors.background};
-          border-color: ${({ theme: { colors } }) => colors.primary};
-        }
-      }
-
-      .dot.selected {
-        background-color: ${({ theme: { colors } }) => colors.background};
-        border-color: ${({ theme: { colors } }) => colors.primary};
-      }
-    }
+  .slick-list {
+    padding-bottom: 8.9rem;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
@@ -90,14 +55,8 @@ export const Container = styled.section`
       max-width: 360px;
     }
 
-    .carousel {
-      .control-dots {
-        margin-bottom: 0;
-      }
-
-      .slider-wrapper {
-        padding-bottom: 10rem;
-      }
+    .slider-list {
+      padding-bottom: 10rem;
     }
   }
 `;
@@ -111,9 +70,10 @@ export const ContainerText = styled.span`
 `;
 
 export const CarouselItem = styled.div`
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   justify-content: space-between;
+  outline: none;
 
   p,
   ${PartnerName} {

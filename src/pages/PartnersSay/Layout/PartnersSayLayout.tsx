@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTheme, DefaultTheme } from 'styled-components';
 import { useTranslation, Trans } from 'react-i18next';
-import { Carousel } from 'react-responsive-carousel';
+import Slider from 'react-slick';
 
 import IconLinkedIn from 'res/svg/icon-linkedin.svg';
 import { Heading, ButtonMailto, ButtonIcon } from 'components';
@@ -34,18 +34,19 @@ const PartnersSayLayout: React.FC<Props> = (props: Props) => {
     returnObjects: true,
   });
 
+  const settings = {
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    pauseOnHover: false,
+    pauseOnDotsHover: true,
+  };
+
   return (
     <Container {...props}>
       <Heading label={t('title')} />
-      <Carousel
-        showArrows={false}
-        showStatus={false}
-        showThumbs={false}
-        infiniteLoop={true}
-        emulateTouch={false}
-        autoPlay={true}
-        interval={7000}
-      >
+      <Slider {...settings}>
         {list.map((item, i: number) => (
           <CarouselItem key={`partners-say-${i}`}>
             <Picture src={require(`res/images/partners/${item.picture}`)} />
@@ -69,7 +70,7 @@ const PartnersSayLayout: React.FC<Props> = (props: Props) => {
             </ContainerText>
           </CarouselItem>
         ))}
-      </Carousel>
+      </Slider>
       <ButtonMailto
         title={t('partners:cta.title')}
         label={t('partners:cta.label')}
