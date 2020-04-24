@@ -5,16 +5,19 @@ import { Container, Wrap, Asset } from './Marquee.styled';
 interface Props {
   asset?: string;
   time?: string;
+  direction?: 'lf' | 'rl';
 }
 
 const Marquee: React.FC<Props> = (props: Props) => {
+  const { asset, time = '16s', direction = 'lf' } = props;
+
   return (
     <Container>
-      <Wrap time={props.time}>
-        <Asset src={props.asset} />
+      <Wrap time={time} direction={direction}>
+        <Asset src={asset} />
       </Wrap>
-      <Wrap time={props.time}>
-        <Asset src={props.asset} />
+      <Wrap time={time} direction={direction}>
+        <Asset src={asset} />
       </Wrap>
     </Container>
   );

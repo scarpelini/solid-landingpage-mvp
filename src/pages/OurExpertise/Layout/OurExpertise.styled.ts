@@ -27,6 +27,7 @@ export const Container = styled.section`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
+    max-height: 2100px;
 
     header {
       margin-bottom: 9.9rem;
@@ -136,23 +137,23 @@ export const Image = styled.img`
 
 export const Video = styled.video`
   position: relative;
-  top: -150px;
+  top: -70px;
   left: 100px;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.laptop} {
     width: 80rem;
-    top: -100px;
+    top: -30px;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
-    top: -90px;
+    top: -10px;
     left: 80px;
     width: 65rem;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     width: 58rem;
-    top: -30px;
+    top: 0;
     left: 50px;
   }
 `;

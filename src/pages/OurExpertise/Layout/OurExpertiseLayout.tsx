@@ -46,13 +46,13 @@ const OurExpertiseLayout: React.FC<Props> = (props: Props) => {
     <>
       <ContainerMarquee>
         <Marquee asset={Line1} />
-        <Marquee asset={Line2} />
+        <Marquee asset={Line2} direction={'rl'} />
       </ContainerMarquee>
       <ContainerMarqueeMobile>
         <Marquee asset={LineM1} />
-        <Marquee asset={LineM2} />
-        <Marquee asset={LineM3} time={'24s'} />
-        <Marquee asset={LineM4} />
+        <Marquee asset={LineM2} time={'8s'} direction={'rl'} />
+        <Marquee asset={LineM3} time={'14s'} />
+        <Marquee asset={LineM4} time={'30s'} direction={'rl'} />
       </ContainerMarqueeMobile>
       <Container {...props}>
         <Heading label={t('title')} />

@@ -1,15 +1,25 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 interface Props {
   time?: string;
+  direction?: 'lf' | 'rl';
 }
 
-export const marquee = keyframes`
+export const marqueeLF = keyframes`
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
+  }
+`;
+
+export const marqueeRL = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 `;
 
@@ -29,7 +39,14 @@ export const Wrap = styled.div<Props>`
   flex-shrink: 0;
   position: relative;
   height: 9.1rem;
-  animation: ${marquee} ${({ time = '16s' }) => time} linear infinite;
+  animation: ${({ time, direction }) =>
+    direction === 'lf'
+      ? css`
+          ${marqueeLF} ${time} linear infinite
+        `
+      : css`
+          ${marqueeRL} ${time} linear infinite
+        `};
 `;
 
 export const Asset = styled.img`

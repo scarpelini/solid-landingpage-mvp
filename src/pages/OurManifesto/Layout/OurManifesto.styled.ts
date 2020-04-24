@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Source = styled.source``;
 
 export const Container = styled.section`
+  position: relative;
+  z-index: 1;
   padding-top: 4rem;
 
   header {
