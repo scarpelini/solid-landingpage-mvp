@@ -106,10 +106,10 @@ export const Text = styled.span`
 `;
 
 export const ContainerVideo = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.onSecondary};
+  background-color: ${({ theme: { colors } }) => colors.background};
   margin-top: 9.8rem;
   width: 100%;
-  height: 72.6rem;
+  height: auto;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     position: relative;
@@ -122,6 +122,7 @@ export const ContainerVideo = styled.div`
 
 export const Video = styled.video`
   width: 100%;
+  height: 100%;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     position: absolute;
