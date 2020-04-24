@@ -49,6 +49,15 @@ const SayHiLayout: React.FC<Props> = (props: Props) => {
               Instagram
             </A>
           </SocialItem>
+          <SocialItem>
+            <A
+              href={'https://www.linkedin.com/company/solidsolutions'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
+            >
+              Whatsapp
+            </A>
+          </SocialItem>
         </Socials>
         <Local>
           <Text>{t('common:city')}</Text>

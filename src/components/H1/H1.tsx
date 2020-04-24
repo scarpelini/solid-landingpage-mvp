@@ -25,6 +25,11 @@ const H1 = styled.h1`
     font-family: ${({ theme: { typography } }) => typography.h1.fontFamily};
     font-weight: normal;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    font-size: 3.6rem;
+    line-height: 6.4rem;
+  }
 `;
 
 export default H1;

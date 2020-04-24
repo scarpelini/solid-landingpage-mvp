@@ -3,13 +3,21 @@ import styled from 'styled-components';
 export const Source = styled.source``;
 
 export const Container = styled.section`
+  max-height: 1280px;
+
   header {
+    position: relative;
+    z-index: 1;
     margin-bottom: 11.2rem;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     padding-left: 5.2rem;
     padding-right: 5.2rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.laptop} {
+    max-height: 100%;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
@@ -100,6 +108,7 @@ export const Title = styled.h3`
   font-size: ${({ theme: { typography } }) => typography.subtitle1.fontSize};
   font-family: ${({ theme: { typography } }) =>
     typography.subtitle1.fontFamily};
+
   font-weight: 500;
   margin-bottom: 3.9rem;
 
@@ -126,11 +135,24 @@ export const Image = styled.img`
 `;
 
 export const Video = styled.video`
+  position: relative;
+  top: -150px;
+  left: 100px;
+
   @media ${({ theme: { breakpoints } }) => breakpoints.laptop} {
-    width: 100rem;
+    width: 80rem;
+    top: -100px;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    top: -90px;
+    left: 80px;
+    width: 65rem;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    margin-top: 4rem;
+    width: 58rem;
+    top: -30px;
+    left: 50px;
   }
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Source = styled.source``;
 
 export const Container = styled.section`
-  padding-top: 19.6rem;
+  padding-top: 4rem;
 
   header {
     margin-bottom: 6.4rem;
@@ -103,14 +103,30 @@ export const Text = styled.span`
   }
 `;
 
-export const Video = styled.video`
-  background-color: ${({ theme: { colors } }) => colors.secondary};
+export const ContainerVideo = styled.div`
+  background-color: ${({ theme: { colors } }) => colors.onSecondary};
   margin-top: 9.8rem;
+  width: 100%;
+  height: 72.6rem;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    position: relative;
+    margin-top: 7.4rem;
+    width: 100%;
+    height: 41rem;
+    overflow: hidden;
+  }
+`;
+
+export const Video = styled.video`
   width: 100%;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    margin-top: 7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: auto;
-    height: 72.6rem;
+    height: 100%;
   }
 `;

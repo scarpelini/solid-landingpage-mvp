@@ -7,7 +7,7 @@ export const Footer = styled.footer`
   margin-top: 11.9rem;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    margin-top: 9.4rem;
+    margin-top: 7.5rem;
   }
 `;
 export const Label = styled.p`
@@ -17,9 +17,11 @@ export const Label = styled.p`
 export const ButtonShape = styled.span`
   font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
   font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
-  color: ${({ theme: { colors } }) => colors.error};
+  color: ${({ theme: { colors } }) => colors.background};
+  background-color: ${({ theme: { colors } }) => colors.error};
+  border: 0.2rem solid ${({ theme: { colors } }) => colors.error};
   margin-top: 1.3rem;
-  padding: 2.2rem 4rem;
+  padding: 2.4rem 4rem;
   width: auto;
   text-transform: uppercase;
   text-decoration: none;
@@ -34,8 +36,8 @@ export const Button = styled.a`
 
   &:hover {
     ${ButtonShape} {
-      color: ${({ theme: { colors } }) => colors.background};
-      background-color: ${({ theme: { colors } }) => colors.error};
+      color: ${({ theme: { colors } }) => colors.error};
+      background-color: ${({ theme: { colors } }) => colors.background};
     }
   }
 `;

@@ -8,11 +8,10 @@ const ButtonGoTo: React.FC = () => {
   const { t } = useTranslation(['common']);
 
   function scrollWithOffset() {
-    const rootElement = document.getElementById('root');
     const target = document.getElementById('our-expertise');
 
-    if (rootElement && target) {
-      rootElement.scrollTo({ top: target.offsetTop - 101, behavior: 'smooth' });
+    if (target) {
+      window.scrollTo({ top: target.offsetTop - 101, behavior: 'smooth' });
     }
   }
 

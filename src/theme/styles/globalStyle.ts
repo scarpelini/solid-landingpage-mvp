@@ -4,21 +4,18 @@ import { normalize } from 'styled-normalize';
 const GlobalStyle = createGlobalStyle`
   ${normalize};
 
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 62.5%;
-    box-sizing: border-box;
-    height: 100%;
-  }
-
-  *, *:before, *:after {
-    box-sizing: inherit;
   }
 
   body {
     -webkit-tap-highlight-color: transparent;
-    height: 100%;
     font-family: 'Suisse-Regular', 'Helvetica', 'Arial', sans-serif;
     font-size: 2rem;
   }
@@ -50,7 +47,8 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     overflow-x: hidden;
-    height: 100%;
+    /* height: 100%; */
+    /* scroll-behavior: smooth; */
   }
 
   ::selection {

@@ -35,14 +35,10 @@ const Header: React.FC = () => {
   // const nextTheme = currentTheme === 'light' ? 'Dark' : 'Light';
 
   function scrollToTop() {
-    const rootElement = document.getElementById('root');
-
-    if (rootElement) {
-      rootElement.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 
   return (

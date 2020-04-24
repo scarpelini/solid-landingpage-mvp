@@ -38,12 +38,16 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   padding: 3rem 0;
   width: 100%;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    position: absolute;
+  }
 `;
 
 export const Text = styled.p`
@@ -87,8 +91,9 @@ export const ButtonBookNow = styled.a`
   font-family: ${({ theme: { typography } }) => typography.body1.fontFamily};
   font-size: ${({ theme: { typography } }) => typography.body1.fontSize};
   color: ${({ theme: { colors } }) => colors.error};
+  border: 0.2rem solid ${({ theme: { colors } }) => colors.error};
   position: relative;
-  padding: 2.6rem 5.1rem;
+  padding: 2.4rem 4.9rem;
   text-decoration: none;
   font-weight: normal;
   letter-spacing: 0.69pt;
@@ -97,34 +102,10 @@ export const ButtonBookNow = styled.a`
   &:hover {
     color: ${({ theme: { colors } }) => colors.background};
     background-color: ${({ theme: { colors } }) => colors.error};
-
-    &:before {
-      opacity: 0;
-    }
-  }
-
-  &:before {
-    background-color: ${({ theme: { colors } }) => colors.primary};
-
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 34px;
-    left: -31px;
-    margin: 0 2rem;
-    width: 4.2rem;
-    height: 0.1rem;
-    transition: opacity 0.1s ease-in-out 0s;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     margin-right: 0;
-  }
-
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    &:before {
-      display: none;
-    }
   }
 `;
 

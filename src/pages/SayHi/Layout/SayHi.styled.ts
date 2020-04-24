@@ -66,6 +66,11 @@ export const Subtitle = styled.h2`
     text-align: left;
     max-width: 330px;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding: 0 2.4rem;
+    font-size: 2.3rem;
+  }
 `;
 
 export const Footer = styled.footer`

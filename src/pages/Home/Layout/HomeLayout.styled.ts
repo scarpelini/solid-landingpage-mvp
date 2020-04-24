@@ -26,6 +26,11 @@ export const Home = styled.section`
     height: auto;
   }
 
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+
   @media (max-height: 690px) {
     padding-top: 11rem;
     height: auto;
@@ -136,6 +141,12 @@ export const Text = styled.p`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     text-align: left;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    font-size: calc(
+      ${({ theme: { typography } }) => typography.body2.fontSize} - 1.4rem
+    );
   }
 `;
 
