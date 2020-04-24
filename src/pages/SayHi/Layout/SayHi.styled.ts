@@ -38,6 +38,8 @@ export const Container = styled.section`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding-top: 15.5rem;
+
     header {
       h1 {
         font-size: ${({ theme: { typography } }) => typography.body4.fontSize};
@@ -45,6 +47,10 @@ export const Container = styled.section`
         line-height: 8rem;
       }
     }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding-top: 9.1rem;
   }
 `;
 
@@ -61,14 +67,17 @@ export const Subtitle = styled.h2`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    margin-bottom: 15.8rem;
+    margin-bottom: 14rem;
     font-size: 2.8rem;
     text-align: left;
-    max-width: 330px;
+    line-height: 3.5rem;
+    max-width: 325px;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    margin-bottom: 5.5rem;
     padding: 0 2.4rem;
+    max-width: 324px;
     font-size: 2.3rem;
   }
 `;
@@ -79,7 +88,7 @@ export const Footer = styled.footer`
   justify-content: space-between;
   align-items: center;
   margin-top: 22.6rem;
-  margin-bottom: 10rem;
+  margin-bottom: 7.2rem;
 
   @media (max-width: 1049px) {
     padding: 0 2.5rem;
@@ -99,6 +108,10 @@ export const Socials = styled.ul`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     order: 2;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    flex-direction: column;
+  }
 `;
 
 export const SocialItem = styled.li`
@@ -109,6 +122,18 @@ export const SocialItem = styled.li`
   &:not(:last-child) {
     margin-right: 5.1rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    &:not(:last-child) {
+      margin-right: 3.5rem;
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    &:not(:last-of-type) {
+      margin-bottom: 2.4rem;
+    }
+  }
 `;
 
 export const Local = styled.div`
@@ -117,8 +142,8 @@ export const Local = styled.div`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     order: 1;
-    margin-top: 11.1rem;
-    padding: 0 0 14.8rem 2.7rem;
+    margin-top: 10rem;
+    padding: 0 0 10rem 2.7rem;
   }
 `;
 
@@ -176,16 +201,22 @@ export const CtaText = styled.span`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     font-size: ${({ theme: { typography } }) => typography.body4.fontSize};
     font-weight: normal;
-    line-height: 8rem;
+    line-height: 4.5rem;
+    max-width: 405px;
 
     &:last-of-type {
       margin-bottom: 0;
 
       &:after {
         right: 37px;
-        bottom: 12px;
+        bottom: -4px;
       }
     }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    line-height: 4.5rem;
+    max-width: 350px;
   }
 `;
 

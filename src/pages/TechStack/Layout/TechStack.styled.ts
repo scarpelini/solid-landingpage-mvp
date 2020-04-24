@@ -34,9 +34,13 @@ export const Container = styled.section`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    padding-top: 14.2rem;
+    padding-top: 9rem;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
+
+    header {
+      margin-bottom: 9rem;
+    }
 
     h1 {
       max-width: 310px;
@@ -47,7 +51,7 @@ export const Container = styled.section`
         typography.body2.fontFamily};
       font-size: ${({ theme: { typography } }) => typography.body2.fontSize};
 
-      margin: 8rem 0;
+      margin: 7.5rem 0 8.5rem 0;
       font-weight: normal;
       text-align: left;
       line-height: 5rem;
@@ -75,7 +79,16 @@ export const Text = styled.p`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    padding: 0 2.7rem;
+    padding: 0 2.2rem 0 2.5rem;
+
+    &:first-of-type {
+      margin-bottom: 7.5rem;
+      line-height: 3.5rem;
+    }
+
+    &:last-of-type {
+      line-height: 3.5rem;
+    }
   }
 `;
 

@@ -10,7 +10,7 @@ import LineM4 from 'res/svg/line-m-4.svg';
 import Movie1 from 'res/videos/device.mp4';
 import Movie2 from 'res/videos/device.ogg';
 
-import { Heading, Marquee } from 'components';
+import { Heading, Marquee, ButtonMailto } from 'components';
 
 import {
   Container,
@@ -73,6 +73,11 @@ const OurExpertiseLayout: React.FC<Props> = (props: Props) => {
               <Source src={Movie2} type={'video/ogg'} />
             </Video>
           </Col>
+          <ButtonMailto
+            className={'is-mobile'}
+            title={t('cta.title')}
+            label={t('cta.label')}
+          />
         </Content>
       </Container>
     </>

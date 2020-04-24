@@ -22,13 +22,10 @@ const H1 = styled.h1`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    font-size: ${({ theme: { typography } }) => typography.body4.fontSize};
     font-family: ${({ theme: { typography } }) => typography.h1.fontFamily};
+    line-height: 5.5rem;
     font-weight: normal;
-  }
-
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    font-size: 3.6rem;
-    line-height: 6.4rem;
   }
 `;
 

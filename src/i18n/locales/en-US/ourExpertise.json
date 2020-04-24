@@ -13,5 +13,9 @@
       "title": "Flexible workforce",
       "description": "Do you already have a UX & UI ready for the Development phase? No problem, we can help you too. Our team is flexible enough to work from different starting points."
     }
-  ]
+  ],
+  "cta": {
+    "title": "Start with something solid.",
+    "label": "Start now"
+  }
 }

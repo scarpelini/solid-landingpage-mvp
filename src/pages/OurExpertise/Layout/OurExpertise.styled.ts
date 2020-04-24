@@ -30,7 +30,7 @@ export const Container = styled.section`
     max-height: 2100px;
 
     header {
-      margin-bottom: 9.9rem;
+      margin-bottom: 9rem;
     }
 
     h1 {
@@ -49,7 +49,7 @@ export const ContainerMarquee = styled.div`
 `;
 
 export const ContainerMarqueeMobile = styled.div`
-  margin: 2rem 0 11.6rem 0;
+  margin: 2rem 0 6.5rem 0;
   display: none;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -63,9 +63,20 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: flex-start;
 
+  .is-mobile {
+    display: none;
+    z-index: 2;
+    margin-top: -5rem;
+    margin-bottom: 9rem;
+  }
+
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     flex-direction: column;
     align-items: center;
+
+    .is-mobile {
+      display: block;
+    }
   }
 `;
 
@@ -127,6 +138,10 @@ export const Description = styled.p`
   font-family: ${({ theme: { typography } }) => typography.body2.fontFamily};
   line-height: 4.2rem;
   max-width: 652px;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    line-height: 3.5rem;
+  }
 `;
 
 export const Image = styled.img`

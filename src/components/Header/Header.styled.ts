@@ -31,6 +31,7 @@ export const ButtonLogo = styled.button.attrs({ type: 'button' })``;
 export const Image = styled.img`
   position: relative;
   z-index: 11;
+  height: 4.2rem;
 `;
 
 export const Container = styled.header`
@@ -106,6 +107,17 @@ export const ButtonBookNow = styled.a`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     margin-right: 0;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding-bottom: 2.2rem;
+    padding-right: 0;
+    border: 0;
+
+    &:hover {
+      color: ${({ theme: { colors } }) => colors.error};
+      background-color: ${({ theme: { colors } }) => colors.background};
+    }
   }
 `;
 

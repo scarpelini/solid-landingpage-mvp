@@ -26,7 +26,7 @@ export const Container = styled.section`
     padding-right: 0;
 
     header {
-      margin-bottom: 10.7rem;
+      margin-bottom: 9rem;
       padding-left: 2.4rem;
       padding-right: 2.4rem;
     }
@@ -82,14 +82,11 @@ export const Text = styled.span`
     padding-right: 2.4rem;
 
     p {
-      &:nth-of-type(1) {
-        padding: 0 2.7rem;
-        margin-bottom: 8.3rem;
-      }
-
+      &:nth-of-type(1),
       &:nth-of-type(2) {
-        margin-bottom: 8.5rem;
         padding: 0 2.7rem;
+        margin-bottom: 7.5rem;
+        line-height: 3.5rem;
       }
     }
 
@@ -99,7 +96,7 @@ export const Text = styled.span`
       line-height: 5rem;
 
       &:not(:last-of-type) {
-        margin-bottom: 8rem;
+        margin-bottom: 7.5rem;
       }
     }
   }

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Footer, Label, Button, ButtonShape } from './ButtonMailto.styled';
 
 interface Props {
+  className?: string;
   title?: string;
   label?: string;
 }
@@ -12,7 +13,7 @@ const ButtonMailto: React.FC<Props> = (props: Props) => {
   const { t } = useTranslation(['common']);
 
   return (
-    <Footer>
+    <Footer className={props.className}>
       <Button href={t('common:mailto')}>
         <Label>{props.title}</Label>
         {/* t('common:button.noDreamComes') */}

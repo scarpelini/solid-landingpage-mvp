@@ -30,6 +30,10 @@ export const Description = styled.p`
   font-size: ${({ theme: { typography } }) => typography.button1.fontSize};
   color: ${({ theme: { colors } }) => colors.secondary};
   margin-bottom: 3.7rem;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    margin-bottom: 2.7rem;
+  }
 `;
 
 export const Span = styled.span`

@@ -13,9 +13,8 @@ export const PartnerName = styled.p`
 
     a {
       position: absolute;
-      bottom: -36px;
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: -58px;
+      left: 14px;
       width: 4rem;
       height: 4rem;
     }
@@ -39,17 +38,15 @@ export const Container = styled.section`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    padding-top: 13.3rem;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+
     align-items: flex-start;
 
     header {
       margin-bottom: 9.8rem;
     }
-  }
-
-  @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
-    padding-top: 13.3rem;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
 
     h1 {
       max-width: 360px;
@@ -57,6 +54,22 @@ export const Container = styled.section`
 
     .slider-list {
       padding-bottom: 10rem;
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding-top: 9rem;
+
+    .slick-list {
+      padding-bottom: 14rem;
+    }
+
+    header {
+      margin-bottom: 9rem;
+    }
+
+    footer {
+      margin-top: 9.6rem;
     }
   }
 `;
@@ -102,8 +115,12 @@ export const CarouselItem = styled.div`
     p,
     ${PartnerName} {
       font-size: ${({ theme: { typography } }) => typography.button2.fontSize};
-      padding: 0 2.7rem;
-      line-height: 4.5rem;
+      padding: 0 0.5rem 0 2.7rem;
+      line-height: 3.5rem;
+    }
+
+    ${PartnerName} {
+      margin-top: 3rem;
     }
   }
 `;

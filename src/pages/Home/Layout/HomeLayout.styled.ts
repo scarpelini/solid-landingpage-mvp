@@ -20,7 +20,7 @@ export const Home = styled.section`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    padding-top: 11rem;
+    padding-top: 10.2rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     height: auto;
@@ -32,7 +32,7 @@ export const Home = styled.section`
   }
 
   @media (max-height: 690px) {
-    padding-top: 11rem;
+    padding-top: 10.2rem;
     height: auto;
   }
 `;
@@ -55,7 +55,7 @@ export const Title = styled(H1)`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    margin-bottom: 7.6rem;
+    margin-bottom: 4.4rem;
     max-width: 300px;
   }
 
@@ -107,6 +107,7 @@ export const List = styled.ul`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    margin-bottom: 4.9rem;
     padding: 0 2.2rem 0 2.7rem;
   }
 `;
@@ -121,7 +122,7 @@ export const ListItem = styled.li`
 
     &:not(:last-child) {
       margin-right: 0;
-      margin-bottom: 7rem;
+      margin-bottom: 5rem;
     }
   }
 `;
@@ -162,12 +163,14 @@ export const Footer = styled.footer`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     position: relative;
     bottom: auto;
-    margin-top: 7.4rem;
-    margin-bottom: 11.3rem;
+    margin-top: 13.2rem;
+    margin-bottom: 11.5rem;
   }
 
-  @media (max-height: 690px) {
+  @media (max-width: 767px) and (max-height: 690px) {
     position: relative;
+    bottom: 0;
+    margin-top: 5.2rem;
   }
 `;
 
