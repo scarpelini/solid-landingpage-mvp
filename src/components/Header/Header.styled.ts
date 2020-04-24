@@ -47,7 +47,12 @@ export const Container = styled.header`
   width: 100%;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    background-color: transparent;
     position: absolute;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding: 1.9rem 0;
   }
 `;
 

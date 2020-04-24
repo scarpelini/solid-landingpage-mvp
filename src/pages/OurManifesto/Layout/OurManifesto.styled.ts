@@ -35,6 +35,16 @@ export const Container = styled.section`
       max-width: 260px;
     }
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    header {
+      margin-bottom: 7.5rem;
+    }
+
+    footer a {
+      max-width: 290px;
+    }
+  }
 `;
 
 export const Text = styled.span`
@@ -92,12 +102,32 @@ export const Text = styled.span`
 
     h2 {
       font-size: ${({ theme: { typography } }) => typography.body2.fontSize};
-
       line-height: 5rem;
 
       &:not(:last-of-type) {
         margin-bottom: 7.5rem;
       }
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    p {
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        font-size: 1.8rem;
+        padding: 0 1.5rem;
+        line-height: 3rem;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 6.1rem;
+      }
+    }
+
+    h2 {
+      font-size: ${({ theme: { typography } }) =>
+        typography.subtitle1.fontSize};
+      line-height: 4.5rem;
     }
   }
 `;

@@ -9,6 +9,10 @@ const typography: Typography = {
     fontFamily: primaryFont,
     fontSize: '8rem',
   },
+  h1Mobile: {
+    fontFamily: primaryFont,
+    fontSize: '3.5rem',
+  },
   h2: {
     fontFamily: primaryFont,
     fontSize: '2rem',

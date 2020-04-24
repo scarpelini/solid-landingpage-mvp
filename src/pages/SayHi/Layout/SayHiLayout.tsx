@@ -51,7 +51,7 @@ const SayHiLayout: React.FC<Props> = (props: Props) => {
           </SocialItem>
           <SocialItem>
             <A
-              href={'https://www.linkedin.com/company/solidsolutions'}
+              href={`https://wa.me/`}
               target={'_blank'}
               rel={'noopener noreferrer'}
             >

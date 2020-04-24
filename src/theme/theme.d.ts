@@ -22,6 +22,7 @@ export interface TextStyle {
 
 export interface Typography {
   h1: TextStyle;
+  h1Mobile: TextStyle;
   h2: TextStyle;
   subtitle1: TextStyle;
   subtitle2: TextStyle;

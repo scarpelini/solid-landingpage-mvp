@@ -72,6 +72,19 @@ export const Container = styled.section`
       margin-top: 9.6rem;
     }
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+
+    .slick-list {
+      padding-bottom: 7rem;
+    }
+
+    header {
+      margin-bottom: 7.5rem;
+    }
+  }
 `;
 
 export const ContainerText = styled.span`
@@ -123,6 +136,15 @@ export const CarouselItem = styled.div`
       margin-top: 3rem;
     }
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    p,
+    ${PartnerName} {
+      font-size: ${({ theme: { typography } }) => typography.button1.fontSize};
+      padding: 0 1.5;
+      line-height: 3rem;
+    }
+  }
 `;
 
 export const Picture = styled.img`
@@ -142,5 +164,9 @@ export const Picture = styled.img`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     width: 28.4rem;
     height: 35.2rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    margin-bottom: 6.5rem;
   }
 `;

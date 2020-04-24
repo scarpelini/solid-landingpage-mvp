@@ -37,6 +37,14 @@ export const Container = styled.section`
       max-width: 320px;
     }
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding-right: 1.9rem;
+
+    header {
+      margin-bottom: 7.5rem;
+    }
+  }
 `;
 
 export const ContainerMarquee = styled.div`
@@ -54,6 +62,10 @@ export const ContainerMarqueeMobile = styled.div`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     display: block;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    margin-bottom: 6.3rem;
   }
 `;
 
@@ -100,6 +112,12 @@ export const Col = styled.div`
       padding: 0 2.2rem 0 2.7rem;
     }
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    &:first-of-type {
+      padding: 0 1.5rem;
+    }
+  }
 `;
 
 export const List = styled.ul``;
@@ -142,6 +160,11 @@ export const Description = styled.p`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     line-height: 3.5rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
 `;
 
 export const Image = styled.img`
@@ -170,5 +193,10 @@ export const Video = styled.video`
     width: 58rem;
     top: 0;
     left: 50px;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    width: 51rem;
+    left: 40px;
   }
 `;

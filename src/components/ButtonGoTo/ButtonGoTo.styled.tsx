@@ -34,6 +34,10 @@ export const Description = styled.p`
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     margin-bottom: 2.7rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    display: none;
+  }
 `;
 
 export const Span = styled.span`

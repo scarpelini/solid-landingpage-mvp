@@ -43,6 +43,22 @@ export const Container = styled.section`
       }
     }
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    .slick-slider {
+      padding-bottom: 3rem;
+    }
+
+    header {
+      h1 {
+        max-width: 275px;
+      }
+
+      br {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const List = styled.ul`
@@ -169,6 +185,59 @@ export const ListItem = styled.li`
       ${Asset} {
         width: 25rem;
         left: -20px;
+      }
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    height: 13rem;
+
+    &.hp {
+      ${Asset} {
+        width: 6.2rem;
+      }
+    }
+
+    &.kia {
+      ${Asset} {
+        width: 10.5rem;
+      }
+    }
+
+    &.citroen {
+      ${Asset} {
+        width: 9.5rem;
+      }
+    }
+
+    &.globo {
+      ${Asset} {
+        width: 6.5rem;
+      }
+    }
+
+    &.campus-party {
+      ${Asset} {
+        width: 15rem;
+      }
+    }
+
+    &.visa {
+      ${Asset} {
+        width: 9.9rem;
+      }
+    }
+
+    &.unilever {
+      ${Asset} {
+        width: 8.7rem;
+      }
+    }
+
+    &.pepsico {
+      ${Asset} {
+        width: 18.1rem;
+        left: -5px;
       }
     }
   }

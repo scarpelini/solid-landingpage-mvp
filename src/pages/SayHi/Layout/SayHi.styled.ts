@@ -76,9 +76,9 @@ export const Subtitle = styled.h2`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
     margin-bottom: 5.5rem;
-    padding: 0 2.4rem;
+    padding: 0 0 0 4rem;
     max-width: 324px;
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 `;
 
@@ -145,6 +145,11 @@ export const Local = styled.div`
     margin-top: 10rem;
     padding: 0 0 10rem 2.7rem;
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    margin-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
 `;
 
 export const Text = styled.p`
@@ -156,6 +161,11 @@ export const Text = styled.p`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     font-size: 2.8rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
   }
 `;
 

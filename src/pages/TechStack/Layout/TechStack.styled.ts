@@ -62,6 +62,18 @@ export const Container = styled.section`
       }
     }
   }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    h2 {
+      margin: 7.5rem 0;
+      font-size: 2.8rem;
+      line-height: 4.5rem;
+
+      br {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const Text = styled.p`
@@ -80,15 +92,18 @@ export const Text = styled.p`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     padding: 0 2.2rem 0 2.5rem;
+    line-height: 3.5rem;
 
     &:first-of-type {
       margin-bottom: 7.5rem;
       line-height: 3.5rem;
     }
+  }
 
-    &:last-of-type {
-      line-height: 3.5rem;
-    }
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+    padding: 0 1.5rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
   }
 `;
 
@@ -132,6 +147,20 @@ export const ListItem = styled.li`
 
     &:nth-child(3) {
       max-width: 130px;
+    }
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    &:nth-child(1) {
+      max-width: 93px;
+    }
+
+    &:nth-child(2) {
+      max-width: 164px;
+    }
+
+    &:nth-child(3) {
+      max-width: 86px;
     }
   }
 `;

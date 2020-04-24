@@ -33,6 +33,7 @@ export const Button = styled.a`
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  text-align: center;
 
   &:hover {
     ${ButtonShape} {
