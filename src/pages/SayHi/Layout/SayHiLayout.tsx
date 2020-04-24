@@ -51,7 +51,7 @@ const SayHiLayout: React.FC<Props> = (props: Props) => {
           </SocialItem>
           <SocialItem>
             <A
-              href={`https://wa.me/`}
+              href={'http://api.whatsapp.com/send?1=pt_BR&phone=5514998913966'}
               target={'_blank'}
               rel={'noopener noreferrer'}
             >
