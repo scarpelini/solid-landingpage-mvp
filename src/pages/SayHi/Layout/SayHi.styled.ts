@@ -90,7 +90,7 @@ export const Footer = styled.footer`
   margin-top: 22.6rem;
   margin-bottom: 7.2rem;
 
-  @media (max-width: 1049px) {
+  @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     padding: 0 2.5rem;
   }
 
