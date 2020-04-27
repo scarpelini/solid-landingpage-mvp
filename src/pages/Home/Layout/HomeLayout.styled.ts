@@ -8,7 +8,11 @@ export const Home = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: auto;
+
+  > ul {
+    display: none;
+  }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     padding-left: 5.2rem;
@@ -20,15 +24,14 @@ export const Home = styled.section`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    justify-content: flex-start;
     padding-top: 10.2rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    height: auto;
-  }
 
-  @media (max-width: 767px) and (max-height: 690px) {
-    padding-top: 10.2rem;
-    height: auto;
+    > ul {
+      display: block;
+    }
   }
 `;
 
@@ -87,7 +90,9 @@ export const MobileText = styled.p`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
     padding-left: 1.5rem;
+  }
 
+  @media (max-width: 767px) and (max-height: 567px) {
     &:first-of-type {
       display: none;
     }
@@ -97,7 +102,7 @@ export const MobileText = styled.p`
 export const List = styled.ul`
   display: flex;
   flex-direction: row;
-  margin-bottom: 7.8rem;
+  margin: 0 auto 7.8rem auto;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     max-width: 1050px;
@@ -111,7 +116,7 @@ export const List = styled.ul`
     order: 3;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 3rem;
+    margin: 3rem 0 0 0;
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -167,6 +172,7 @@ export const Text = styled.p`
 export const Footer = styled.footer`
   position: absolute;
   bottom: 40px;
+  width: 100%;
 
   @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
     order: 2;
@@ -174,10 +180,13 @@ export const Footer = styled.footer`
   }
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    bottom: 100px;
+  }
+
+  @media (min-width: 767px) and (max-height: 768px) {
     position: relative;
-    bottom: auto;
-    margin-top: 13.2rem;
-    margin-bottom: 11.5rem;
+    bottom: 40px;
+    margin-top: 5.2rem;
   }
 
   @media (max-width: 767px) and (max-height: 690px) {
@@ -186,8 +195,8 @@ export const Footer = styled.footer`
     margin-top: 5.2rem;
   }
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
-    margin-top: 6.2rem;
+  @media (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    bottom: -20px;
   }
 `;
 
@@ -196,3 +205,41 @@ export const FooterLabel = styled.p`
 `;
 
 export const Button = styled.button.attrs({ type: 'button' })``;
+
+export const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.tablet} {
+    height: calc(100vh - 10rem);
+    padding-top: 10.2rem;
+  }
+
+  @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    justify-content: flex-start;
+    padding-top: 0;
+    height: calc(100vh - 10rem);
+
+    > ul {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    justify-content: flex-start;
+    height: calc(100vh - 4rem);
+  }
+
+  @media (min-width: 767px) and (max-height: 775px) {
+    padding-top: 10.2rem;
+    height: auto;
+  }
+
+  @media (max-width: 767px) and (max-height: 567px) {
+    height: auto;
+  }
+`;

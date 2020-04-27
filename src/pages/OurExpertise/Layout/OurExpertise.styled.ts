@@ -11,6 +11,10 @@ export const Container = styled.section`
     margin-bottom: 11.2rem;
   }
 
+  h1 br {
+    display: none;
+  }
+
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     padding-left: 5.2rem;
     padding-right: 5.2rem;
@@ -35,6 +39,10 @@ export const Container = styled.section`
 
     h1 {
       max-width: 320px;
+
+      br {
+        display: block;
+      }
     }
   }
 
@@ -191,6 +199,7 @@ export const Video = styled.video`
 
   @media ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     width: 58rem;
+    height: 50rem;
     top: 0;
     left: 50px;
   }

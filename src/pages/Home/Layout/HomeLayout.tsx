@@ -15,6 +15,7 @@ import 'res/css/custom-slick.css';
 import {
   Home,
   Title,
+  Wrap,
   List,
   ListItem,
   Text,
@@ -30,34 +31,45 @@ const HomeLayout: React.FC = () => {
   });
 
   return (
-    <Container>
-      <HeaderFixed id={'header-fixed'} />
-      <Home id={'home'}>
-        <Title
-          dangerouslySetInnerHTML={{
-            __html: t('home:title'),
-          }}
-        />
-        <MobileText>{t('header:immediateAvailability')}</MobileText>
-        <MobileText>{t('header:investment')}</MobileText>
-        <List>
-          {list.map((item, i: number) => (
-            <ListItem key={`homeLayout-${i}`}>
-              <Text>{item}</Text>
-            </ListItem>
-          ))}
-        </List>
-        <Footer>
-          <ButtonGoTo />
-        </Footer>
-      </Home>
-      <OurExpertise id={'our-expertise'} />
-      <OurManifesto id={'our-manifesto'} />
-      <TechStack id={'tech-stack'} />
-      <PartnersSay id={'partners-say'} />
-      <Companies id={'companies'} />
-      <SayHi id={'say-hi'} />
-    </Container>
+    <>
+      <Container>
+        <HeaderFixed id={'header-fixed'} />
+        <Home id={'home'}>
+          <Wrap>
+            <Title
+              dangerouslySetInnerHTML={{
+                __html: t('home:title'),
+              }}
+            />
+            <MobileText>{t('header:immediateAvailability')}</MobileText>
+            <MobileText>{t('header:investment')}</MobileText>
+            <List>
+              {list.map((item, i: number) => (
+                <ListItem key={`homeLayout-${i}`}>
+                  <Text>{item}</Text>
+                </ListItem>
+              ))}
+            </List>
+            <Footer>
+              <ButtonGoTo />
+            </Footer>
+          </Wrap>
+          <List>
+            {list.map((item, i: number) => (
+              <ListItem key={`homeLayout-${i}`}>
+                <Text>{item}</Text>
+              </ListItem>
+            ))}
+          </List>
+        </Home>
+        <OurExpertise id={'our-expertise'} />
+        <OurManifesto id={'our-manifesto'} />
+        <TechStack id={'tech-stack'} />
+        <PartnersSay id={'partners-say'} />
+        <Companies id={'companies'} />
+        <SayHi id={'say-hi'} />
+      </Container>
+    </>
   );
 };
 

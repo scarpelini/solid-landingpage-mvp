@@ -17,6 +17,7 @@ export const Button = styled.button.attrs({ type: 'button' })`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   text-decoration: none;
 
   &:hover {
@@ -35,7 +36,7 @@ export const Description = styled.p`
     margin-bottom: 2.7rem;
   }
 
-  @media ${({ theme: { breakpoints } }) => breakpoints.mobileS} {
+  @media (max-width: 320px) and (max-height: 568px) {
     display: none;
   }
 `;

@@ -38,7 +38,7 @@ interface ListProps {
 const OurExpertiseLayout: React.FC<Props> = (props: Props) => {
   const { t } = useTranslation(['ourExpertise']);
 
-  const list: ListProps[] = t('list', {
+  const list: ListProps[] = t('ourExpertise:list', {
     returnObjects: true,
   });
 
