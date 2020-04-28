@@ -33,6 +33,10 @@ export const Home = styled.section`
       display: block;
     }
   }
+
+  @media (max-width: 320px) and (max-height: 470px) {
+    padding-top: 8.2rem;
+  }
 `;
 
 export const Title = styled(H1)`
@@ -198,6 +202,10 @@ export const Footer = styled.footer`
   @media (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
     bottom: -20px;
   }
+
+  @media (max-width: 320px) and (max-height: 470px) {
+    margin-top: 1.6rem;
+  }
 `;
 
 export const FooterLabel = styled.p`
@@ -239,7 +247,7 @@ export const Wrap = styled.div`
     height: auto;
   }
 
-  @media (max-width: 767px) and (max-height: 567px) {
+  @media (min-width: 767px) and (max-height: 567px) {
     height: auto;
   }
 `;
