@@ -11,10 +11,6 @@ export const Container = styled.section`
     margin-bottom: 11.2rem;
   }
 
-  h1 br {
-    display: none;
-  }
-
   @media ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     padding-left: 5.2rem;
     padding-right: 5.2rem;
