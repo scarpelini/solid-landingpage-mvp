@@ -1,17 +1,34 @@
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 
-import { Container } from "./Home.styled";
+import {
+  SectionHome,
+  SectionCompanies,
+  SectionOurExpertise,
+  SectionOurManifesto,
+  SectionPartners,
+  SectionSayHi,
+  SectionTechStack,
+} from '~/components';
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>MVP SSR</title>
-      </Head>
+import { Container } from './Home.styled';
 
-      <Container>
-        <h1>MVP Solid Solutions</h1>
-      </Container>
-    </>
-  );
-}
+const Home: React.FC = () => (
+  <>
+    <Head>
+      <title>SOLID Design and Development for Startups</title>
+    </Head>
+
+    <Container>
+      <SectionHome />
+      <SectionOurExpertise />
+      <SectionOurManifesto />
+      <SectionTechStack />
+      <SectionPartners />
+      <SectionCompanies />
+      <SectionSayHi />
+    </Container>
+  </>
+);
+
+export default Home;
