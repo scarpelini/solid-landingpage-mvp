@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Suisse-Regular';
+  src: url(/assets/fonts/SuisseIntl-Regular.ttf) format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Suisse-Medium';
+  src: url(/assets/fonts/SuisseIntl-Medium.ttf) format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Integral-Regular';
+  src: url(/assets/fonts/IntegralCF-Regular.woff2) format('woff2'),
+    url(/assets/fonts/IntegralCF-Regular.woff) format('woff');
+  font-weight: normal;
+}

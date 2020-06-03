@@ -1,3 +1,6 @@
+export { default as Header } from './Header/Header.layout';
+export { default as ButtonOutline } from './ButtonOutline/ButtonOutline.layout';
+export { default as Menu } from './Menu/Menu.layout';
 export { default as SectionHome } from './SectionHome/SectionHome.layout';
 export { default as SectionCompanies } from './SectionCompanies/SectionCompanies.layout';
 export { default as SectionOurExpertise } from './SectionOurExpertise/SectionOurExpertise.layout';

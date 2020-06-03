@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 import {
+  Header,
   SectionHome,
   SectionCompanies,
   SectionOurExpertise,
@@ -20,6 +21,7 @@ const Home: React.FC = () => (
     </Head>
 
     <Container>
+      <Header />
       <SectionHome />
       <SectionOurExpertise />
       <SectionOurManifesto />
