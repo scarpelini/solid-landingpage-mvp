@@ -4,6 +4,8 @@ import { AppProps } from 'next/app';
 
 import { getTheme } from '../theme';
 
+import { Layout } from '~/components';
+
 import '../styles/typography.css';
 import GlobalStyles from '../styles/global.styled';
 
@@ -11,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (
     <ThemeProvider theme={getTheme('light')}>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }

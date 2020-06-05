@@ -4,7 +4,13 @@ import { ButtonOutline } from '~/components';
 
 import { Container, Nav, ButtonLogo } from './Header.styled';
 
-const Header: React.FC = () => {
+interface Props {
+  data: {
+    investment: string;
+  };
+}
+
+const Header: React.FC<Props> = ({ data }) => {
   return (
     <Container>
       <div>
@@ -14,7 +20,7 @@ const Header: React.FC = () => {
 
         <Nav>
           <ul>
-            <li>Investment starting point ~$10,000</li>
+            <li>{data.investment}</li>
             <li>Immediate Availability</li>
             <li>
               <ButtonOutline>Book Now</ButtonOutline>

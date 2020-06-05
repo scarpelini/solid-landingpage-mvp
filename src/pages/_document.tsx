@@ -8,9 +8,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
         <body id="root">
-          <main>
-            <Main />
-          </main>
+          <Main />
           <NextScript />
         </body>
       </Html>
