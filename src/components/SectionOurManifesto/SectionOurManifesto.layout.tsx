@@ -1,10 +1,46 @@
 import React from 'react';
 
-import { Container } from './SectionOurManifesto.styled';
+import { Heading, Button } from '~/components';
 
-const SectionOurManifesto: React.FC = () => (
+import {
+  Container,
+  Content,
+  ContainerVideo,
+} from './SectionOurManifesto.styled';
+
+type ListItem = { text: string };
+
+interface Props {
+  data: {
+    title: string;
+    content: ListItem[];
+    video: string;
+  };
+}
+
+const SectionOurManifesto: React.FC<Props> = ({ data }) => (
   <Container>
-    <h1>Our Manifesto</h1>
+    <Heading text={data.title} />
+
+    {data.content.map((item: ListItem, i: number) => (
+      <Content
+        key={i.toString()}
+        dangerouslySetInnerHTML={{ __html: `${item.text}` }}
+      />
+    ))}
+
+    <ContainerVideo>
+      <video autoPlay muted playsInline loop>
+        <source src={data.video} type="video/mp4" />
+      </video>
+    </ContainerVideo>
+
+    <footer>
+      <Button
+        textPreffix="No dream comes true without action."
+        label="Book Us Now"
+      />
+    </footer>
   </Container>
 );
 

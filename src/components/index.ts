@@ -2,6 +2,7 @@ export { default as Layout } from './Layout/Layout';
 export { default as Header } from './Header/Header.layout';
 export { default as H1 } from './H1/H1.layout';
 export { default as Heading } from './Heading/Heading.layout';
+export { default as Button } from './Button/Button.layout';
 export { default as ButtonOutline } from './ButtonOutline/ButtonOutline.layout';
 export { default as Menu } from './Menu/Menu.layout';
 export { default as Marquee } from './Marquee/Marquee.layout';

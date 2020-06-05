@@ -24,6 +24,9 @@ interface Results {
     our_expertise_title: { text: string }[];
     our_expertise_list: [];
     our_expertise_video: { url: string };
+    manifest_title: { text: string }[];
+    manifest_content: { text: string }[];
+    manifest_video: { url: string };
   };
 }
 
@@ -43,7 +46,7 @@ const Home: React.FC<Results> = ({ data }) => {
     });
   }
 
-  // console.log(data);
+  console.log(data);
 
   return (
     <>
@@ -67,7 +70,14 @@ const Home: React.FC<Results> = ({ data }) => {
           }}
         />
 
-        <SectionOurManifesto />
+        <SectionOurManifesto
+          data={{
+            title: data.manifest_title[0].text,
+            content: data.manifest_content,
+            video: data.manifest_video.url,
+          }}
+        />
+
         <SectionTechStack />
         <SectionPartners />
         <SectionCompanies />
@@ -78,7 +88,7 @@ const Home: React.FC<Results> = ({ data }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const ref = 'XtpJshAAACMAOt3m';
+  const ref = 'XtqOWBAAACMAPBW0';
 
   const response: Data = await axios.get(
     `http://solid-landingpage-mvp.cdn.prismic.io/api/v2/documents/search?ref=${ref}`,
