@@ -1,0 +1,41 @@
+.slick-dots {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+
+.slick-dots li {
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+.slick-dots li:not(:last-child) {
+  margin: 0 1.1rem 0 0;
+}
+
+.slick-dots li button {
+  padding: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: #000000;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+  border: 0.2rem solid #000000;
+  border-radius: 50%;
+  font-size: 0;
+  transition: background-color 0.25s ease-in-out 0s,
+    border-color 0.25s ease-in-out 0s;
+}
+
+.slick-dots li.slick-active button,
+.slick-dots li button:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.slick-dots li button:before {
+  display: none;
+}

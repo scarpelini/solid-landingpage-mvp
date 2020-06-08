@@ -16,22 +16,28 @@ import {
 
 import { Container } from './Home.styled';
 
+type Text = { text: string };
+
+type Url = { url: string };
+
 interface Results {
   data: {
     investment_starting_point: string;
-    home_title: { text: string }[];
-    home_list: { text: string }[];
-    our_expertise_title: { text: string }[];
-    our_expertise_list: [];
-    our_expertise_video: { url: string };
-    manifest_title: { text: string }[];
-    manifest_content: { text: string }[];
-    manifest_video: { url: string };
-    tech_title: { text: string }[];
-    tech_subtitle: { text: string }[];
-    tech_list_logo: [];
-    tech_quote: { text: string }[];
-    tech_description: { text: string }[];
+    home_title: Text[];
+    home_list: Text[];
+    our_expertise_title: Text[];
+    our_expertise_list: Array;
+    our_expertise_video: Url;
+    manifest_title: Text[];
+    manifest_content: Text[];
+    manifest_video: Url;
+    tech_title: Text[];
+    tech_subtitle: Text[];
+    tech_list_logo: Array;
+    tech_quote: Text[];
+    tech_description: Text[];
+    partners_title: Text[];
+    partners_list: Array;
   };
 }
 
@@ -93,8 +99,15 @@ const Home: React.FC<Results> = ({ data }) => {
           }}
         />
 
-        <SectionPartners />
+        <SectionPartners
+          data={{
+            title: data.partners_title[0].text,
+            list: data.partners_list,
+          }}
+        />
+
         <SectionCompanies />
+
         <SectionSayHi />
       </Container>
     </>
@@ -102,7 +115,7 @@ const Home: React.FC<Results> = ({ data }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const ref = 'Xt5AaxAAACIATHg_';
+  const ref = 'Xt6GqBAAACMATbL1';
 
   const response: Data = await axios.get(
     `http://solid-landingpage-mvp.cdn.prismic.io/api/v2/documents/search?ref=${ref}`,

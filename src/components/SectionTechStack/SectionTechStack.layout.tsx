@@ -4,7 +4,12 @@ import { Heading } from '~/components';
 
 import { Container, List } from './SectionTechStack.styled';
 
-type ListItem = { tech_photo: { url: string } };
+type ListItem = {
+  tech_photo: {
+    url: string;
+    alt: string;
+  };
+};
 
 interface Props {
   data: {
@@ -25,7 +30,7 @@ const SectionTechStack: React.FC<Props> = ({ data }) => (
     <List>
       {data.list.map((item: ListItem, i: number) => (
         <li key={i.toString()}>
-          <img src={item.tech_photo.url} alt="Tech" />
+          <img src={item.tech_photo.url} alt={item.tech_photo.alt} />
         </li>
       ))}
     </List>
