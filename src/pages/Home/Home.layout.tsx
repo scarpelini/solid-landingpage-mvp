@@ -27,6 +27,11 @@ interface Results {
     manifest_title: { text: string }[];
     manifest_content: { text: string }[];
     manifest_video: { url: string };
+    tech_title: { text: string }[];
+    tech_subtitle: { text: string }[];
+    tech_list_logo: [];
+    tech_quote: { text: string }[];
+    tech_description: { text: string }[];
   };
 }
 
@@ -78,7 +83,16 @@ const Home: React.FC<Results> = ({ data }) => {
           }}
         />
 
-        <SectionTechStack />
+        <SectionTechStack
+          data={{
+            title: data.tech_title[0].text,
+            subtitle: data.tech_subtitle[0].text,
+            list: data.tech_list_logo,
+            quote: data.tech_quote[0].text,
+            description: data.tech_description[0].text,
+          }}
+        />
+
         <SectionPartners />
         <SectionCompanies />
         <SectionSayHi />
@@ -88,7 +102,7 @@ const Home: React.FC<Results> = ({ data }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const ref = 'XtqOWBAAACMAPBW0';
+  const ref = 'Xt5AaxAAACIATHg_';
 
   const response: Data = await axios.get(
     `http://solid-landingpage-mvp.cdn.prismic.io/api/v2/documents/search?ref=${ref}`,

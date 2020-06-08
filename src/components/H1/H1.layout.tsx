@@ -8,7 +8,6 @@ const H1 = styled.h1`
   margin: 0;
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal;
   line-height: 10.7rem;
 
   @media ${(props) => props.theme.breakpoints.desktop} {
