@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useCallback } from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 import { GetStaticProps } from 'next';
@@ -40,6 +40,11 @@ interface Results {
     partners_list: [];
     companies_title: Text[];
     companies_list: [];
+    sayhi_title: Text[];
+    sayhi_subtitle: Text[];
+    sayhi_say_hi: Text[];
+    sayhi_mailto: Url;
+    sayhi_social_list: [];
   };
 }
 
@@ -50,16 +55,21 @@ interface Data {
 }
 
 const Home: React.FC<Results> = ({ data }) => {
-  const sectionExpertiseRef = useRef<HTMLDivElement>(null);
-
-  function handleGoTo(): void {
+  const handleGoTo = useCallback(() => {
     window.scrollTo({
-      top: sectionExpertiseRef.current?.offsetTop - 101,
+      top: document.getElementById('sec-expertise')?.offsetTop - 101,
       behavior: 'smooth',
     });
-  }
+  }, []);
 
-  console.log(data);
+  const handleScrolToTop = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
+  // console.log(data);
 
   return (
     <>
@@ -68,7 +78,10 @@ const Home: React.FC<Results> = ({ data }) => {
       </Head>
 
       <Container>
-        <Header data={{ investment: data.investment_starting_point }} />
+        <Header
+          data={{ investment: data.investment_starting_point }}
+          onScrollTop={handleScrolToTop}
+        />
 
         <SectionHome
           data={{ title: data.home_title[0].text, list: data.home_list }}
@@ -76,6 +89,7 @@ const Home: React.FC<Results> = ({ data }) => {
         />
 
         <SectionOurExpertise
+          id="sec-expertise"
           data={{
             title: data.our_expertise_title[0].text,
             list: data.our_expertise_list,
@@ -115,14 +129,22 @@ const Home: React.FC<Results> = ({ data }) => {
           }}
         />
 
-        <SectionSayHi />
+        <SectionSayHi
+          data={{
+            subtitle: data.sayhi_subtitle[0].text,
+            title: data.sayhi_title[0].text,
+            sayHi: data.sayhi_say_hi[0].text,
+            mailTo: data.sayhi_mailto,
+            socials: data.sayhi_social_list,
+          }}
+        />
       </Container>
     </>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const ref = 'Xt6b2BAAAB0AThHu';
+  const ref = 'Xt6v8xAAAB4ATmzv';
 
   const response: Data = await axios.get(
     `http://solid-landingpage-mvp.cdn.prismic.io/api/v2/documents/search?ref=${ref}`,

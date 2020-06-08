@@ -5,16 +5,15 @@ import { ButtonOutline } from '~/components';
 import { Container, Nav, ButtonLogo } from './Header.styled';
 
 interface Props {
-  data: {
-    investment: string;
-  };
+  data: { investment: string };
+  onScrollTop(): void;
 }
 
-const Header: React.FC<Props> = ({ data }) => {
+const Header: React.FC<Props> = ({ data, onScrollTop }) => {
   return (
     <Container>
       <div>
-        <ButtonLogo onClick={() => console.log('click')}>
+        <ButtonLogo onClick={onScrollTop}>
           <img src="/assets/svg/solid-logotype.svg" alt="SOLID" />
         </ButtonLogo>
 

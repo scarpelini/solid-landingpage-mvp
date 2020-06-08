@@ -6,7 +6,7 @@ class MyDocument extends Document {
   render(): ReactElement {
     return (
       <Html lang="en">
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1" />
         <Head />
         <body id="root">
           <Main />

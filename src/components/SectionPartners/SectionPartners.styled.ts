@@ -63,6 +63,10 @@ export const Container = styled.section`
     margin-bottom: 19.3rem;
   }
 
+  footer {
+    margin-top: 11.9rem;
+  }
+
   li {
     display: flex !important;
     flex-direction: row;

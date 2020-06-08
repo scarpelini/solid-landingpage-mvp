@@ -18,6 +18,7 @@ type ListItem = {
 };
 
 interface Props {
+  id: string;
   data: {
     title: string;
     list: ListItem[];
@@ -25,7 +26,7 @@ interface Props {
   };
 }
 
-const SectionOurExpertise: React.FC<Props> = ({ data }) => (
+const SectionOurExpertise: React.FC<Props> = ({ id, data }) => (
   <>
     <ContainerMarquee>
       <Marquee
@@ -69,7 +70,7 @@ const SectionOurExpertise: React.FC<Props> = ({ data }) => (
       />
     </ContainerMarqueeMobile>
 
-    <Container>
+    <Container id={id}>
       <Heading text={data.title} />
 
       <Content>

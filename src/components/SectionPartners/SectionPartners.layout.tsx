@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import { Heading } from '~/components';
+import { Heading, Button } from '~/components';
 
 import {
   Container,
@@ -71,6 +71,13 @@ const SectionPartners: React.FC<Props> = ({ data }) => {
           </li>
         ))}
       </Slider>
+
+      <footer>
+        <Button
+          textPreffix="Don't waste time overthinking."
+          label="Schedule a Meeting"
+        />
+      </footer>
     </Container>
   );
 };
