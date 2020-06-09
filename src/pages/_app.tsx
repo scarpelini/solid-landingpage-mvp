@@ -11,7 +11,7 @@ import 'slick-carousel/slick/slick.css';
 import '../styles/typography.css';
 import '../styles/custom-slick.css';
 
-import GlobalStyles from '../styles/global.styled';
+import GlobalStyles from '../styles/Global.styled';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   useEffect(() => {

@@ -6,10 +6,7 @@ class MyDocument extends Document {
   render(): ReactElement {
     return (
       <Html lang="en">
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-120125891-2"
-        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120125891-2" />
 
         <script
           dangerouslySetInnerHTML={{
@@ -98,102 +95,40 @@ class MyDocument extends Document {
         <Head />
 
         <title>SOLID Design and Development for Startups</title>
-
-        <meta
-          name="title"
-          content="SOLID Design and Development for Startups"
-        />
-
-        <meta
-          name="description"
-          content="Get your MVP ready for the world in a few weeks through SOLIDs design and development processes focused on web or mobile applications."
-        />
-
+        <meta name="title" content="SOLID Design and Development for Startups" />
+        <meta name="description" content="Get your MVP ready for the world in a few weeks through SOLIDs design and development processes focused on web or mobile applications." />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <link rel="icon" href="assets/favicon/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="57x57"
-          href="assets/favicon//apple-icon-57x57.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="60x60"
-          href="assets/favicon//apple-icon-60x60.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="72x72"
-          href="assets/favicon//apple-icon-72x72.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="assets/favicon//apple-icon-76x76.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="114x114"
-          href="assets/favicon//apple-icon-114x114.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="assets/favicon//apple-icon-120x120.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="144x144"
-          href="assets/favicon//apple-icon-144x144.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="assets/favicon//apple-icon-152x152.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="assets/favicon//apple-icon-180x180.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="assets/favicon//android-icon-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="assets/favicon//favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="96x96"
-          href="assets/favicon//favicon-96x96.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="assets/favicon//favicon-16x16.png"
-        />
-        <link rel="manifest" href="assets/favicon//manifest.json" />
+        <link rel="icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta
-          name="msapplication-TileImage"
-          content="assets/favicon//ms-icon-144x144.png"
-        />
+        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
-        <meta
-          name="description"
-          content="Web site created using create-react-app"
-        />
-        <link rel="apple-touch-icon" href="assets/logo192.png" />
-        <link rel="manifest" href="assets/manifest.json" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mvp.solidsolutions.io/" />
+        <meta property="og:title" content="SOLID Design and Development for Startups" />
+        <meta property="og:description" content="Get your MVP ready for the world in a few weeks through SOLIDs design and development processes focused on web or mobile applications." />
+        <meta property="og:image" content="/sharing-image.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://mvp.solidsolutions.io/" />
+        <meta property="twitter:title" content="SOLID Design and Development for Startups" />
+        <meta property="twitter:description" content="Get your MVP ready for the world in a few weeks through SOLIDs design and development processes focused on web or mobile applications." />
+        <meta property="twitter:image" content="/sharing-image.png" />
 
         <body id="root">
           <Main />
