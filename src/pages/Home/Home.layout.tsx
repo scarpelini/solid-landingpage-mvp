@@ -14,7 +14,7 @@ import {
   SectionTechStack,
 } from '~/components';
 
-import { Container } from './Home.styled';
+import Container from './Home.styled';
 
 type Text = { text: string };
 
@@ -45,6 +45,14 @@ interface Results {
     sayhi_say_hi: Text[];
     sayhi_mailto: Url;
     sayhi_social_list: [];
+  };
+}
+
+interface DataRef {
+  data: {
+    refs: {
+      ref: string;
+    }[];
   };
 }
 
@@ -146,20 +154,34 @@ const Home: React.FC<Results> = ({ data }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const ref = 'Xt6v8xAAAB4ATmzv';
+export const getStaticProps: GetStaticProps = async (): Promise<{
+  props: object;
+}> => {
+  const repository = 'solid-landingpage-mvp';
 
-  const response: Data = await axios.get(
-    `http://solid-landingpage-mvp.cdn.prismic.io/api/v2/documents/search?ref=${ref}`,
-  );
+  try {
+    const responseRef: DataRef = await axios.get(
+      `http://${repository}.cdn.prismic.io/api/v2`,
+    );
 
-  const { data } = response.data.results[0];
+    const { ref } = responseRef.data.refs[0];
 
-  return {
-    props: {
-      data,
-    },
-  };
+    const response: Data = await axios.get(
+      `http://${repository}.cdn.prismic.io/api/v2/documents/search?ref=${ref}`,
+    );
+
+    const { data } = response.data.results[0];
+
+    return {
+      props: {
+        data,
+      },
+    };
+  } catch (error) {
+    console.warn('Error load DATA');
+  }
+
+  return null;
 };
 
 export default Home;
