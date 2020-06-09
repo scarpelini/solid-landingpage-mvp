@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
-import Head from 'next/head';
 import axios from 'axios';
 import { GetStaticProps } from 'next';
 
 import {
   Header,
+  HeaderMobile,
   SectionHome,
   SectionCompanies,
   SectionOurExpertise,
@@ -73,13 +73,14 @@ const Home: React.FC<Results> = ({ data }) => {
 
   return (
     <>
-      <Head>
-        <title>SOLID Design and Development for Startups</title>
-      </Head>
-
       <Container>
+        <HeaderMobile data={{ mailto: data.sayhi_mailto.url }} />
+
         <Header
-          data={{ investment: data.investment_starting_point }}
+          data={{
+            investment: data.investment_starting_point,
+            mailto: data.sayhi_mailto.url,
+          }}
           onScrollTop={handleScrolToTop}
         />
 
@@ -102,6 +103,7 @@ const Home: React.FC<Results> = ({ data }) => {
             title: data.manifest_title[0].text,
             content: data.manifest_content,
             video: data.manifest_video.url,
+            mailto: data.sayhi_mailto.url,
           }}
         />
 
@@ -119,6 +121,7 @@ const Home: React.FC<Results> = ({ data }) => {
           data={{
             title: data.partners_title[0].text,
             list: data.partners_list,
+            mailto: data.sayhi_mailto.url,
           }}
         />
 

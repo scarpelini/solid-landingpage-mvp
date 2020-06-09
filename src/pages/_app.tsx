@@ -1,6 +1,7 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { AppProps } from 'next/app';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import { getTheme } from '../theme';
 
@@ -13,6 +14,10 @@ import '../styles/custom-slick.css';
 import GlobalStyles from '../styles/global.styled';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
+  useEffect(() => {
+    smoothscroll.polyfill();
+  }, []);
+
   return (
     <ThemeProvider theme={getTheme('light')}>
       <GlobalStyles />

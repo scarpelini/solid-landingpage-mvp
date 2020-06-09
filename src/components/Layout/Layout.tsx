@@ -5,6 +5,7 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 
   section {
     margin: 0 auto;

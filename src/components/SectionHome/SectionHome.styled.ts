@@ -103,7 +103,7 @@ export const Title = styled(H1)`
   }
 
   @media (min-width: 1025px) and (max-height: 720px) {
-    margin-bottom: 8rem;
+    margin: 0 auto 8rem auto;
   }
 `;
 

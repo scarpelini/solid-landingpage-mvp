@@ -149,11 +149,25 @@ export const ContainerVideo = styled.div`
   width: 100%;
   height: auto;
 
+  video {
+    width: 100%;
+    height: 100%;
+  }
+
   @media ${(props) => props.theme.breakpoints.mobile} {
     position: relative;
     margin-top: 7.4rem;
     width: 100%;
     height: 41rem;
     overflow: hidden;
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: 100%;
+    }
   }
 `;

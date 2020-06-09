@@ -23,6 +23,7 @@ interface Props {
   data: {
     title: string;
     list: ListItem[];
+    mailto: string;
   };
 }
 
@@ -74,6 +75,7 @@ const SectionPartners: React.FC<Props> = ({ data }) => {
 
       <footer>
         <Button
+          href={data.mailto}
           textPreffix="Don't waste time overthinking."
           label="Schedule a Meeting"
         />

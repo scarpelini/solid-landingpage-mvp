@@ -15,6 +15,7 @@ interface Props {
     title: string;
     content: ListItem[];
     video: string;
+    mailto: string;
   };
 }
 
@@ -37,6 +38,7 @@ const SectionOurManifesto: React.FC<Props> = ({ data }) => (
 
     <footer>
       <Button
+        href={data.mailto}
         textPreffix="No dream comes true without action."
         label="Book Us Now"
       />

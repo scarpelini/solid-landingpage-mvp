@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.button`
+export const Container = styled.a`
   color: ${(props) => props.theme.colors.error};
   font-family: ${(props) => props.theme.typography.body1.fontFamily};
   font-size: ${(props) => props.theme.typography.body1.fontSize};

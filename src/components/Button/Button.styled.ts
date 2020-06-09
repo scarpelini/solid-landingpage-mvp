@@ -5,6 +5,7 @@ export const Container = styled.a`
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  text-align: center;
 
   span {
     &:first-of-type {
