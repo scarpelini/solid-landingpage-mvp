@@ -85,9 +85,9 @@ const Home: React.FC<Results> = ({ data }) => {
       setIsReady(true);
       handleScrolToTop();
     }, 500);
-  }, []);
 
-  // console.log(data);
+    // console.log(data);
+  }, [handleScrolToTop]);
 
   return (
     <>

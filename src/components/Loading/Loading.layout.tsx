@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { withTheme, DefaultTheme } from 'styled-components';
 import { CircleSpinner } from 'react-spinners-kit';
 
@@ -9,6 +9,8 @@ interface Props {
 }
 
 const Loading: React.FC<Props> = ({ theme }) => {
+  const loadingRef = useRef(null);
+
   useEffect(() => {
     const root = document.getElementById('root');
 
@@ -18,7 +20,7 @@ const Loading: React.FC<Props> = ({ theme }) => {
   }, []);
 
   return (
-    <Container>
+    <Container ref={loadingRef}>
       <CircleSpinner color={theme.colors.primary} size={24} />
     </Container>
   );
