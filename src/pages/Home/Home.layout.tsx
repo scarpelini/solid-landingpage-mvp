@@ -1,8 +1,9 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import axios from 'axios';
 import { GetStaticProps } from 'next';
 
 import {
+  Loading,
   Header,
   HeaderMobile,
   SectionHome,
@@ -63,6 +64,8 @@ interface Data {
 }
 
 const Home: React.FC<Results> = ({ data }) => {
+  const [isReady, setIsReady] = useState(false);
+
   const handleGoTo = useCallback(() => {
     window.scrollTo({
       top: document.getElementById('sec-expertise')?.offsetTop - 101,
@@ -77,10 +80,19 @@ const Home: React.FC<Results> = ({ data }) => {
     });
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsReady(true);
+      handleScrolToTop();
+    }, 500);
+  }, []);
+
   // console.log(data);
 
   return (
     <>
+      {!isReady && <Loading />}
+
       <Container>
         <HeaderMobile data={{ mailto: data.sayhi_mailto.url }} />
 

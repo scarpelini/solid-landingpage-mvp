@@ -130,7 +130,7 @@ class MyDocument extends Document {
         <meta property="twitter:description" content="Get your MVP ready for the world in a few weeks through SOLIDs design and development processes focused on web or mobile applications." />
         <meta property="twitter:image" content="/sharing-image.png" />
 
-        <body id="root">
+        <body id="root" className="block">
           <Main />
           <NextScript />
         </body>

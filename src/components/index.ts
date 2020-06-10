@@ -1,4 +1,5 @@
 export { default as Layout } from './Layout/Layout';
+export { default as Loading } from './Loading/Loading.layout';
 export { default as Header } from './Header/Header.layout';
 export { default as HeaderMobile } from './HeaderMobile/HeaderMobile.layout';
 export { default as H1 } from './H1/H1.layout';

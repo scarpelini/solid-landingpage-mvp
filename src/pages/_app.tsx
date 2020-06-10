@@ -7,11 +7,12 @@ import { getTheme } from '../theme';
 
 import { Layout } from '~/components';
 
-import 'slick-carousel/slick/slick.css';
+import '../styles/loading.css';
 import '../styles/typography.css';
 import '../styles/custom-slick.css';
+import 'slick-carousel/slick/slick.css';
 
-import GlobalStyles from '../styles/Global.styled';
+import GlobalStyles from '../styles/global';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   useEffect(() => {
